@@ -1,0 +1,62 @@
+{
+	"ok": true,
+	"result": [
+		{
+			"update_id": 104905414,
+			"message": {
+				"message_id": 78,
+				"from": {
+					"id": 5265615675,
+					"is_bot": false,
+					"first_name": "정시철",
+					"language_code": "ko"
+				},
+				"chat": {
+					"id": 5265615675,
+					"first_name": "정시철",
+					"type": "private"
+				},
+				"date": 1683426234,
+				"text": "ㅎㅇ"
+			}
+		},
+		{
+			"update_id": 104905415,
+			"message": {
+				"message_id": 79,
+				"from": {
+					"id": 5265615675,
+					"is_bot": false,
+					"first_name": "정시철",
+					"language_code": "ko"
+				},
+				"chat": {
+					"id": 5265615675,
+					"first_name": "정시철",
+					"type": "private"
+				},
+				"date": 1683426285,
+				"text": "hello"
+			}
+		},
+		{
+			"update_id": 104905416,
+			"message": {
+				"message_id": 81,
+				"from": {
+					"id": 5265615675,
+					"is_bot": false,
+					"first_name": "정시철",
+					"language_code": "ko"
+				},
+				"chat": {
+					"id": 5265615675,
+					"first_name": "정시철",
+					"type": "private"
+				},
+				"date": 1683427225,
+				"text": "터미네이터"
+			}
+		}
+	]
+}

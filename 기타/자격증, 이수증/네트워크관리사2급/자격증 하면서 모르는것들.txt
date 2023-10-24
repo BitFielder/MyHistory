@@ -1,0 +1,21 @@
+서브넷마스크 기준
+DHCP
+포트들
+SNMP
+SMTP
+ICMP
+TTL
+NAT
+ARQ(Automatic Repeat Request)
+Topology
+데이터링크 계층
+패킷 교환망
+Multiplexing
+IDS
+IPS
+TCP ACK
+IEEE
+
+NOS 부분 대부분
+
+NFV

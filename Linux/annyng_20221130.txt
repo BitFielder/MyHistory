@@ -1,0 +1,369 @@
+[그룹추가]
+# groupadd sysop
+# groupadd user
+
+
+[사용자추가]
+# useradd kbu -sysop
+# passwd kbu
+
+
+[kbu 계정에 sudo 권한부여]
+# vi /etc/sudoers
+ 101라인쯔음에 아래 내용 추가
+ kbu ALL=(ALL)   NOPASSWD: ALL
+
+
+[AnNyung3 전환]
+# yum install perl
+# curl -o bootstrap http://mirror.oops.org/pub/AnNyung/3/inst/bootstrap
+# bash bootstrap
+
+
+[재부팅]
+# reboot
+# yum update
+
+
+[이미지/글씨를 텍스트로 변환]
+https://www.ascii-art-generator.org/
+standard로 배너 생성, 복사
+
+
+[로그인 화면 배너 변경]
+# vi /etc/issue
+# vi /etc/issue.net
+
+※ 로그인시에 배너가 출력되지 않으면 아래 내용 설정 변경
+# vi /etc/ssh/sshd_config
+ 124라인쯤에 #주석 없애고 배너 파일 설정
+ Banner /etc/issue.net
+
+
+[자동 로그아웃 시간 변경]
+# vi /etc/profile.d/tmout.sh
+기본이 600초(10분), 0은 무제한
+
+
+[방화벽 설정]
+# vi /etc/oops-firewall/filter.conf
+22, 25, 80, 443 기본포트만 오픈
+
+
+[웹서버설치] httpd 2.4
+# yum install httpd httpd-conf htpd-tools httpd-nis httpd-url httpd-fcgid httpd-devel mod_ssl
+
+
+[PHP설치] php 7.3
+# yum install php73 php73-cli php73-common php73-devel php73-extension php73-korean php73-mysql
+
+
+[mariaDB설치] mariaDB 10.4
+# yum install mysql mysql-server
+# service mysqld restart
+
+- root비번 변경
+set PASSWORD for 'root'@'host정보' = PASSWORD('바꿀 비밀번호');
+
+# mysql -u root
+]> set PASSWORD for 'root'@'localhost' = PASSWORD('rootsql!');
+]> flush privileges;
+
+
+[sendmail 설치]
+# yum install sendmail sendmail-cf
+
+0.0.0.0 수정
+access, local-domail IP 및 도메인 추가
+
+
+[커널 최대값 설정]
+# vi /etc/security/limits.conf
+*       soft    nproc       65536
+*       hard    nproc       65536
+*       soft    nofile      65536
+*       hard    nofile      65536
+*       soft    memlock     unlimited
+*       hard    memlock     unlimited
+
+
+[계정생성시 기본 폴더 및 파일 자동생성]
+# cd /etc/skel
+# mkdir www
+# chmod 711 www
+# cd www
+# vi index.php
+  <?php
+   echo $_SERVER['HTTP_HOST']."의 계정 홈 입니다.";
+  ?>
+
+
+[아파치 웹서버 기본설정]
+# vi /etc/httpd/conf/httpd.conf
+  43라인 LogLevel의 crit를 notice로 변경
+
+# vi /etc/httpd/conf.d/LoadModules.conf
+  24라인 주석해제 (LoadModule mpm_prefork_module modules/mod_mpm_prefork.so)
+  36라인 주석처리 (#LoadModule mpm_event_module modules/mod_mpm_event.so)
+  79, 82, 86, 87, 90, 103, 104 라인 주석해제 (필요에 따라 필요한 모듈 해제 후 사용)
+
+# vi /etc/httpd/conf.d/php73.conf
+  5라인 주석 해제 (LoadModule php73_module modules/libphp73.so)
+  9라인 맨뒤에 .html 추가
+  14라인 맨뒤에 :/home 추가
+  21라인 /home/httpd를 /home 로 수정
+
+# vi /etc/httpd/conf.d/Security.conf
+  28라인의 :install 제거 (그누보드 설치를 위해..)
+
+# vi /etc/httpd/user.d/Default.conf
+  75라인 이후에 아래 내용 추가
+    <Directory "/home">
+        AllowOverride       All
+        Options             FollowSymLinks IncludesNoEXEC
+    
+        <RequireAll>
+            Require         all granted
+        </RequireAll>
+    </Directory>
+
+# service httpd restart
+
+
+[PHP7.3 기본설정]
+# vi /etc/php73.d/apache/SHARED.ini
+  6, 7, 8, 9, 10, 12, 13, 15, 16, 19, 20, 24, 27, 28, 29, 43 라인의 주석(;) 제거
+  44라인 하단에 아래 내용 추가
+
+     short_open_tag = On
+     allow_include_extension =
+     disable_functions =
+     
+     ;safe_mode = Off
+     ;
+     allow_url_fopen = On
+     memory_limit = 512M
+     post_max_size = 100M
+     upload_max_filesize = 100M
+     max_file_uploads = 100
+     ;
+     upload_image_check = Off
+     upload_image_check_log = Off
+     upload_image_check_test = Off
+
+# vi /etc/php73.d/cli/SHARED.ini
+  6, 7, 8, 9, 10, 12, 13, 15, 16, 19, 20, 24, 27, 28, 29 라인의 주석(;) 제거
+  44라인 하단에 아래 내용 추가
+
+     short_open_tag = On
+     allow_include_extension =
+     disable_functions =
+     
+     ;safe_mode = Off
+     ;
+     allow_url_fopen = On
+     memory_limit = 512M
+     post_max_size = 100M
+     upload_max_filesize = 100M
+     max_file_uploads = 100
+     ;
+     upload_image_check = Off
+     upload_image_check_log = Off
+     upload_image_check_test = Off
+
+# service httpd restart
+
+
+[아파치 버추얼 호스트 설정]
+- 버추얼 호스트용 계정 2개 추가 (aaa , bbb)
+# useradd aaa -g user
+# passwd aaa
+# useradd bbb -g user
+# passwd bbb
+# chmod 711 /home/aaa /home/bbb
+
+# vi /etc/httpd/user.d/vhost.conf
+  // httpd 설정 하단에 아래 내용 추가
+
+  # aaa.학번.kbuac.kr
+  <VirtualHost *:80>
+   DocumentRoot "/home/aaa/www"
+   ServerName aaa.학번.kbuac.kr
+  </VirtualHost>
+
+  # bbb.학번.kbuac.kr
+  <VirtualHost *:80>
+   DocumentRoot "/home/bbb/www"
+   ServerName bbb.학번.kbuac.kr
+  </VirtualHost>
+
+# service httpd restart
+
+
+[SSL 인증서 발급 및 설치]
+- www.gogetssl.com 에서 90일 무료 인증서 발급 (ssl.학번.kbuac.kr)
+- ssl 계정 생성 후 퍼미션 설정, vhost.conf에 내용 추가
+# useradd ssl -g user
+# passwd ssl
+# chmod 711 /home/ssl
+
+# vi /etc/httpd/user.d/vhost.conf
+
+  # ssl.학번.kbuac.kr
+  <VirtualHost *:80>
+   DocumentRoot "/home/ssl/www"
+   ServerName ssl.학번.kbuac.kr
+  </VirtualHost>
+
+- /home/ssl/SSL 폴더를 만들어서 인증서 파일 3개 업로드 후 vssl.conf 파일 생성/설정
+# vi /etc/httpd/user.d/vssl.conf
+
+  <IfModule mod_ssl.c>
+  
+  <VirtualHost *:443>
+      SSLEngine on
+      SSLCertificateFile /home/ssl/SSL/ssl_9637565_kbuac_kr.crt
+      SSLCertificateKeyFile /home/ssl/SSL/ssl_9637565_kbuac_kr.key
+      SSLCACertificatePath /home/ssl/SSL
+      SSLCACertificateFile /home/ssl/SSL/ssl_9637565_kbuac_kr.ca
+      ServerName  ssl.9637565.kbuac.kr
+      #ServerAlias 
+      DocumentRoot /home/ssl/www
+      ErrorLog logs/ssl.9637565.kbuac.kr_ssl-error_log
+      TransferLog logs/ssl.9637565.kbuac..kr_ssl-access_log
+  </VirtualHost>
+
+
+# 계속 추가로 사용 가능
+
+
+</IfModule>
+
+
+# service httpd restart
+
+
+
+[그누보드 설치용 계정 생성]
+# useradd love -g user
+# passwd love
+# chmod 711 love
+
+# vi /etc/httpd/user.d/vhost.conf
+  # love.9637565.kbuac.kr
+  <VirtualHost *:80>
+   DocumentRoot "/home/love/www"
+   ServerName love.학번.kbuac.kr
+  </VirtualHost>
+
+# service httpd restart
+
+
+[그누보드 설치용 DB생성]
+]> CREATE DATABASE love;
+]> CREATE USER 'love'@'localhost' IDENTIFIED BY 'lovesql!';
+]> GRANT ALL PRIVILEGES ON *.* TO 'love'@'localhost' WITH GRANT OPTION;
+]> flush privileges;
+
+
+[그누보드 설치]
+- sir.kr 또는 boribat.kr의 ownCloud의 '강의용'폴더에서 다운로드 (kbu/사랑해1!)
+- 파일질라 love계정의 www 폴더안 gnu 폴더에 업로드
+# su -l love
+$ cd www/gnu
+$ tar -xvzf 파일명
+
+
+[텔레그램 챗봇 생성 및 설정]
+- 텔레그램 API 코드 및 chatID 발급, 메시지 발송
+- 텔레그램 강의용 테스트 소스 다운로드 (boribat.kr , kbu/사랑해1!)
+
+- 기본환경 설정
+$ vi config.inc.php 의 $api_token 변수와 $chat_id 변수값 입력
+
+- http://love.학번.kbuac.kr/telegram_db_create.php 으로 텔레그램 저장 테이블 생성
+- http://love.학번/kbuac.kr/telegram_send_list.php 에서 텔레그램 발송 테스트
+
+
+[그누보드에서 글등록시 텔레그램 얼럿 발송]
+# su -l love
+$ vi www/gnu/bbs/write_update.php
+  294와 295라인 사이에 아래 내용 추가
+   //기본 환경설정 로딩
+   include_once "/home/love/www/config.inc.php";
+   
+   //기본 라이브러리 로딩
+   include_once "/home/love/www/lib.inc.php";
+   
+   //발송IP
+   $ip = $_SERVER["REMOTE_ADDR"];
+
+   $tgm_msg = $wr_subject."의 글이 등록되었습니다.";
+
+   //텔레그램 발송     
+   $output = telegram_send($tgm_msg);
+
+   //발송내용 DB 저장
+   $sql = " INSERT INTO telegram_send_list
+               SET tr_api_token   = '{$api_token}',
+                   tr_chat_id     = '{$chat_id}',
+                   tr_datetime    = NOW(),
+                   tr_ip          = '{$ip}',
+                   tr_msg         = '{$tgm_msg}',
+                   tr_status      = '{$status}'
+   ";
+   sql_query($sql);
+
+
+
+
+
+[백업설정]
+# cd /
+# mkdir BACKUP
+# cd /etc/cron.daily/
+# vi backup
+    #!/bin/sh
+    
+    # home 백업
+    NOW=`date +"%Y%m%d"`
+
+    START=`date`
+
+    cd /BACKUP
+    mkdir $NOW
+    cd $NOW
+    #tar cpf - /home --exclude=/home/kbu/www | tar xpf - -C ./
+    cp -af /home/ ./
+    cp -af /etc ./
+    cp -af /var/lib/mysql ./
+
+    END=`date`
+
+    # mysql 계정별 자동 dump 백업
+    NOW=`date +"%Y%m%d"`
+
+    START=`date`
+
+    DB_user='root'
+    DB_pass='rootsql!'
+    cd /BACKUP
+    mkdir $NOW
+    cd $NOW
+
+    for database in `mysqlshow -u ${DB_user} -p"${DB_pass}" | awk -F " " '{ print $2 }' | grep -v "^$" | grep -v "Databases"`
+    do
+           mysqldump -u ${DB_user} -p"${DB_pass}" ${database} | xz -z > ${database}.sql.xz
+    done
+    mysqldump -u ${DB_user} -p"${DB_pass}" -A --add-drop-table | xz -z > TOTAL_MYSQL_$NOW.sql.xz
+
+    END=`date`
+
+    ## 5일 이후 DATA 폴더 삭제
+    find /BACKUP -mindepth 0 -maxdepth 1 -type d -mtime +5 -exec rm -rf {} \;
+
+# chmod 755 backup
+
+
+
+

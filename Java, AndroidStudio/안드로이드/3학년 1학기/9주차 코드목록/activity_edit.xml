@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름 : " />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="80pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit11"/>
+            <EditText
+                android:hint="변경 내용 입력용"
+                android:enabled="false"
+                android:layout_width="80pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit12"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나이 : "/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="80pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit21"/>
+            <EditText
+                android:hint="변경 내용 입력용"
+                android:enabled="false"
+                android:layout_width="80pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit22"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주소 : "/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="120pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit31"/>
+            <EditText
+                android:hint="변경 내용 입력용"
+                android:enabled="false"
+                android:layout_width="120pt"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEdit32"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:id="@+id/edittrigger1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정"
+            android:id="@+id/edittrigger2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인으로 돌아가기"
+            android:id="@+id/editend"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/editlog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</LinearLayout>

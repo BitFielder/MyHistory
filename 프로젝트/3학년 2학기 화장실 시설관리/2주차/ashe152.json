@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ashe152"},
+{"type":"table","name":"testtable1","database":"ashe152","data":
+[
+{"code":"1","nick":"시철하우스","temp":"30","humi":"30","light":"1000"}
+]
+}
+]

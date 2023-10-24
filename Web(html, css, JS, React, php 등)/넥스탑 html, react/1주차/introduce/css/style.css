@@ -1,0 +1,113 @@
+selection{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero {
+    background-image: url(../img/bgl.png);
+    text-align: center;
+    padding-top: 30vh;
+    height: 700px;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+body {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 2px 2px black;
+}
+
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 700%;
+    margin-bottom: 2rem;
+    text-shadow: 5px 5px black;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+p{
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+.container{
+    overflow: auto;
+    height: 100vh;
+}
+
+.menu{
+    background-image: url(../img/bg2.jpg);
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.wrapper ul{
+    font-size: 1.5rem;
+    list-style-type: none;
+    margin-bottom: .5rem;
+    line-height: 1.7;
+}
+
+.contact {
+    background-image: url(../img/bg2.jpg);
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.btn {
+    background: #555;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 3.5rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2rem 0 2.25rem;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #777;
+}
+
+.contact-sns{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding:  0 0 0 0;
+}
+
+.contact-sns a{
+    background: #fff;
+    width: 3.75rem;
+    height: 3rem;
+    display: inline-block;
+    margin: 0 .5rem;
+    border-radius: 30%;
+    font-size: 2rem;
+    padding: .75rem 0 0 .125rem;
+    color: #555;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.contact-sns a:hover{
+    background: rgba(255,255,255,.5);
+}
+
+.contact h2.title{
+    margin-bottom: 0;
+}

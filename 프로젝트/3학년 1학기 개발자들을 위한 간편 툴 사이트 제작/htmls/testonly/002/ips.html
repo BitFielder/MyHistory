@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>IP 주소 확인</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="script.js"></script>
+</head>
+<body style="background-image: url('files/ipbg.png'); background-size: cover;">
+   <div id="ipv6allow">
+      <h1 id="ipv6tips">현재 내 IP주소는...</h1>
+      <span id="ipchecker" onclick="copytext()">
+         <p id="ipshow">로딩 중...</p>
+      </span>
+      <h1 id="ipv6tips">입니다!</h1>
+      <h2 id="ipv6tips">IP Text 클릭 시 IP가 복사됩니다.</h2>
+   </div>
+   <h1 id="ipv6deny"></h1>
+   <h3 id="textbox2" style="top: 5%; z-index: 10;">IP가 복사되었습니다!</h3>
+   <div>
+      <button id="ipv4btn" onclick="changeIdToIPv4()">IPv4 주소 보기</button>
+      <button id="ipv6btn" onclick="changeIdToIPv6()">IPv6 주소 보기</button>
+   </div>
+   <div id="gotomain">
+      <h1>DPTS</h1>
+      <button onClick="location.href='index.html'">메인으로 돌아가기</button>
+   </div>
+</body>
+</html>

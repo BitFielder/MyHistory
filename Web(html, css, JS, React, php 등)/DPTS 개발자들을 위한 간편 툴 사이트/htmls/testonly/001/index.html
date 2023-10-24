@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>DPTS, 개발자들을 위한 간편 툴 모음</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         flex-direction: column;
+      }
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         height: 100%;
+         position: relative;
+      }
+      .button-container {
+         display: flex;
+         justify-content: center;
+         margin-top: 100px;
+      }
+      button {
+         border-radius: 20px;
+         background-color: #FAFAFF;
+         padding: 50px 30px;
+         margin: 40px;
+         font-size: 20px;
+         border: none;
+         width: 200px;
+      }
+      .slot-btn{
+        position: relative;
+        overflow: hidden;
+        background-color: #F7F7FF;
+        color: #000000;
+        border: none;
+        transition: background-color 0.3s;
+        width: 250px;
+        height: 250px;
+        border-radius: 25%;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px;
+      }
+      #redb:hover {
+        color: #000000;
+        background-color: #ffaaaa;
+      }
+      #yellowb:hover {
+        color: #000000;
+        background-color: #ffffaa;
+      }
+      #blueb:hover {
+        color: #000000;
+        background-color: #aaffaa;
+      }
+
+      #business-card-btn {
+         position: absolute;
+         top: 220px;
+         right: 1px;
+         padding: 5px 20px;
+         font-size: 16px;
+         width: auto;
+      }
+      #opinion-btn {
+         position: absolute;
+         top: 180px;
+         right: 1px;
+         padding: 5px 20px;
+         font-size: 16px;
+         width: auto;
+      }
+      #quick-link-btn {
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         padding: 5px 20px;
+         font-size: 16px;
+         width: auto;
+      }
+
+      .subtitle {
+        font-style:italic;
+        font-size: 25pt;
+        margin-top: 0;
+        margin-bottom: 30px;
+        color: #8888ff;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        transform: translateY(-20px);
+      }
+      .tooltip {
+        font-weight: bold;
+        font-size: 100pt;
+        margin-top: 50pt;
+        margin-bottom: 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius:
+4px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip:hover + .subtitle {
+         opacity: 1;
+         transform: translateY(0);
+      }
+      .header {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-bottom: 30px;
+      }
+      #contact-info {
+         position: absolute;
+         bottom: 100px;
+         right: 10px;
+         font-size: 15px;
+         color: #666666;
+      }
+   </style>
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+         <h1 class="tooltip">DPTS</h1>
+         <h2 class="subtitle">Developers Public Tools</h2>
+      </div>
+      <div class="button-container">
+         <button class="slot-btn" id="redb" onClick="location.href='next_page1.html'">ip주소 확인</button>
+         <button class="slot-btn" id="yellowb" onClick="location.href='next_page2.html'">색상 값 찾아주기</button>
+         <button class="slot-btn" id="blueb" onClick="location.href='next_page3.html'">변수타입 별 값 찾아주기</button>
+         <button id="opinion-btn" onClick="location.href='opinion.html'">의견 보내기</button>
+      </div>
+      <button id="business-card-btn">명함</button>
+      <button id="quick-link-btn">배우러 가기</button>
+      <div id="contact-info">우리와 같은 간이 사이트를 만들고 싶다면?</div>
+   </div>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+body {
+}
+
+p {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+input {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+input:hover {
+    background-color: #d3edff;
+}
+
+
+/* 버튼 스타일 */
+button {
+    margin-left: 30px;
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+/* 버튼 호버 효과 */
+button:hover {
+    background-color: #d3edff;
+}
+
+
+#contTitle {
+    margin: 70px;
+    text-align: center;
+    padding: 10px;
+    background-color: #a2ff8b;
+}
+#contTitle p {
+    font-size: 50pt;
+}
+
+#contInfo {
+    margin: 70px;
+    padding: 30px;
+    background-color: #8bcbff; /* 은은한 연두색 배경 */
+}
+#contInfo p {
+    margin: 0;
+}
+
+#contMemo {
+    margin: 70px;
+    padding: 30px;
+    background-color: #cecece; /* 은은한 연두색 배경 */
+}
+#contMemo p {
+    margin: 0;
+}
+
+#selects {
+    background-color: #b7ff9a;
+}
+
+
+
+.memo-form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-top: 10px;
+}
+
+
+
+#contMonitor {
+    margin: 70px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 4fr); /* 2열 */
+    grid-template-rows: repeat(1, 4fr); /* 4행 */
+    gap: 10px; /* 셀 간격 설정 */
+  }
+
+
+/* 행 스타일 */
+.row {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr); /* 4열 */
+    gap: 10px; /* 셀 간격 설정 */
+  }
+  
+  /* 셀 스타일 */
+  .cell {
+    font-weight: bold;
+    font-size: 12pt;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 1.5; /* 텍스트 세로 정렬을 위해 조절 */
+  }

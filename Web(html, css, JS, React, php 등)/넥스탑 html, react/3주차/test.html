@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>테스트용</title>
+    </head>
+
+    <body>
+        <h1>h1입니다.</h1>
+        <h1>h1입니다.</h1>
+        <h1 class="even">even 클래스입니다.</h1>
+        <h2 id="blue">blue 클래스입니다.</h2>
+        <h3 class="green">green 클래스입니다.</h3>
+
+        <script>
+            var selectedItem = document.getElementsByTagName("h1");
+            for(var i = 0; i<selectedItem.length;i++){
+                selectedItem.item(i).style.color = "red";
+            }
+            
+            var selectedItem = document.getElementById("blue");
+            selectedItem.style.color = "blue";
+
+            var selectedItem = document.getElementsByClassName("green");
+            selectedItem[0].style.color = "green";
+
+            var selectedItem = document.querySelectorAll("h1.even");
+            for(var i = 0; i<selectedItem.length;i++){
+                selectedItem.item(i).style.color = "cyan";
+            }
+
+            document.write("document.write로 추가한 문구입니다.");
+            document.write("<p class='dom' style='text-align:center;'>태그로 입력할 수도 있습니다.</p>");
+            
+            var str = document.getElementsByClassName("dom");
+            str[0].innerHTML = "innerHTML으로 수정했습니다.";
+        </script>
+
+    </body>
+</html>

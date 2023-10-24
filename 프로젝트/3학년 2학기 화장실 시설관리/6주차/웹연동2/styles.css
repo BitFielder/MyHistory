@@ -1,0 +1,132 @@
+body {
+}
+
+p {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+input {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+input:hover {
+    background-color: #d3edff;
+}
+
+button {
+    margin-left: 30px;
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+button:hover {
+    background-color: #d3edff;
+}
+
+
+#contTitle {
+    margin: 70px;
+    text-align: center;
+    padding: 10px;
+    background-color: #a2ff8b;
+}
+#contTitle p {
+    font-size: 50pt;
+}
+
+#contInfo {
+    margin: 70px;
+    padding: 30px;
+    background-color: #8bcbff;
+}
+#contInfo p {
+    margin: 0;
+}
+
+#contMemo {
+    margin: 70px;
+    padding: 30px;
+    background-color: #cecece; 
+}
+#contMemo p {
+    margin: 0;
+}
+
+#selects {
+    background-color: #b7ff9a;
+}
+
+
+
+
+#contMonitor {
+    text-align: center;
+    margin: 70px;
+    padding: 30px;
+  }
+
+#options {
+    padding: 10px;
+    background-color: #e6fff7;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+#options p {
+    margin: 0;
+    font-size: 14pt;
+}
+
+#value{
+    color: red;
+}
+
+#monitorTable {
+    width: 95%;
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+
+
+
+
+
+
+.memo-form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-top: 10px;
+}
+
+

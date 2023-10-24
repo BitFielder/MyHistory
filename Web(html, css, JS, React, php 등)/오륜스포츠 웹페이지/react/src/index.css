@@ -1,0 +1,108 @@
+body {
+  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+  html,
+  body {
+    font-size: 8px;
+    overflow-x: hidden !important;
+  }
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/Fonts/NotoSansKR-Regular.otf") format("woff2"),
+    url("/src/Fonts/NotoSansKR-Regular.otf") format("woff"),
+    url("/src/Fonts/NotoSansKR-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR Medium";
+  src: url("/src/Fonts/NotoSansKR-Medium-Alphabetic.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Noto Sans KR Bold";
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap') format("woff"),
+}
+
+@font-face {
+  font-family: "Noto Sans KR Light";
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap') format("woff"),
+}
+
+@font-face {
+  font-family: "gmarketMedium";
+  src: url("/src/Fonts/GmarketSansTTFMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gmarketBold";
+  src: url("/src/Fonts/GmarketSansBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Jalnan";
+  src: url("/src/Fonts/JalnanOTF.otf") format("woff2"),
+    url("/src/Fonts/JalnanOTF.otf") format("woff"),
+    url("/src/Fonts/JalnanOTF.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nanum";
+  src: url("/src/Fonts/나눔명조.otf") format("woff2"),
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+input {
+  padding: 0.5vw;
+}

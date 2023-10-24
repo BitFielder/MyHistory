@@ -1,0 +1,79 @@
+-- 1. 17을 3으로 나눈 나머지 값 0,1,2인경우에 0인 경우 3의 배수, 1인 경우 3으로 나눈 나머지1, 2인 경우 3으로 나눈 나머지가 2 가 나오도록 하는 구문을 작성.
+select case 17%3 when 0 then '3의 배수' when 1 then '나머지 1' when 2 then '나머지 2' end;
+-- 2. C와 k의 아스키코드값을 구하는 구문
+select ascii('C'),ascii('k');
+-- 3. kyungbok의 비트 크기, 문자 개수, 바이트수를 반환하는 구문
+select bit_length('kyungbok'),char_length('kyungbok'),length('kyungbok');
+-- 4. 경기도,남양주,경복대,스마트 라는 글자가 출력되도록 concat_ws를 사용하는 구문
+select concat_ws(',','경기도','경복대','남양주','스마트');
+-- 5. 경복,대학교,스마트,IT,소프트웨어라는 문자열 리스트에서 스마트라는 글자의 위치값을 찾는 구문
+select field('스마트','경복','대학교','스마트','it','소프트웨어');
+-- 6. 7.57137 소수점 4째자리수까지 나오도록 하는 구문
+select format(7.57137,4);
+-- 7. kyungbok을 k*****ok으로 변환하는 구문
+select insert('kyungbok',2,5,'*****');
+-- 8. kyungbok에서 kyu를 반환해주는 구문
+select left('kyungbok',3);
+-- 9. kyungbok에서 yung를 반환해주는 구문
+select mid('kyungbok',2,4);
+-- 10. kyungbok에서 ok를 반환해주는 구문
+select right('kyungbok',2);
+-- 11. 미래인공지능인재에서 인공지능을 AI로 변환해서 출력하는 구문
+select replace('미래인공지능인재','인공지능','AI');
+-- 12. smartit에서 a의 위치값을 구하는 구문 두가지를 작성.
+select instr('smartit','a');
+select locate('a','smartit');
+
+-- ltrim : 문자열의 왼쪽 공백을 제거하는 함수, 단 중간의 공백은 제거되지 않는다.
+select ltrim("     가 나  다");
+-- rtrim(문자열) : 문자열의 오른쪽 공백을 제거하는 함수, 중간의 공백은 제거되지 않는다.
+-- trim(방향값 잘라낼 문자열 fron 기준 문자열), 방향값 : leading(앞),both(양쪽),trailing(뒤)
+select trim(both '$' from '$$$$asdf$$$$');
+select trim(leading '$' from '$$$$asdf$$$$');
+-- repeat(문자열,횟수) : 문자열 횟수만큼 반복한다.
+select repeat('asd',4);
+-- reverse(문자열) : 문자열의 순서를 거꾸로 한다.
+select reverse('가나다라마바');
+-- space(길이) : 길이만큼 공백을 반환해준다.
+select concat('경복대',space(10),'스마트IT소프트웨어과');
+-- substring(문자열 from 시작위치 for 길이) : 싲가위치부터 해당길이만큼 반환해준다.
+select substring('경복대학교' from 3 for 2);
+-- substring_index(문자열, 구분자, 횟수) : 구분자가 왼쪽부터 해당 횟수번째에 나오면
+-- 그 이후에 오른쪽을 버린다, 횟수가 음수이면 오른쪽부터 세고 왼쪽을 버린다.
+select substring_index('www.kbu.ac.kr','.',3);
+select substring_index('www.kbu.ac.kr','.',-2);
+-- MySQL 수학관련 내장함수
+-- ABS(숫자) : 절댓값을 계산.
+select abs(-150);
+-- ceiling(숫자) : 올림, floor(숫자) : 내림, round(숫자) : 반올림
+select ceiling(3.3), floor(5.7), round(6.7);
+-- conv(숫자, 원래 진수, 변환할 진수)
+select conv('cf',16,10),conv(100,10,8);
+-- mod, % : 나머지값을 구한다.
+select mod(17,10),27%10,37 mod 10;
+-- pow(숫자1,숫자2) : 거듭제곱값, sqrt(숫자) : 루트값
+select pow(2,3), sqrt(9);
+-- rand() : 0이상 1미만의 임의의 실수를 구한다.
+select rand();
+select ceiling(rand()*6);
+-- 날짜 및 시간 함수
+-- adddate(날짜, interval 날짜, 개월, 년) : 해당 기간만큼 추가한 날짜값을 반환
+select adddate('2021-4-26', interval 31 day), adddate('2021-4-26',interval 1 month);
+-- subdate(날짜, interval 날짜, 개월, 년) : 해당 기간만큼 감소한 날짜값을 반환
+select subdate('2021-4-26',interval 31 day), subdate('2021-4-26',interval 1 month);
+-- addtime(날짜, 시간, 시간) : 해당시간을 더해준 결과값을 반환
+select addtime('2022-4-26 10:35:13','1:15:20');
+-- subtime (날짜, 시간, 시간) : 해당시간을 빼준 결과값을 반환
+select subtime('2022-4-26 10:35:13','1:15:20');
+-- curdate() : 현재 연-월-일
+-- curtime() : 현재 시-분-초
+-- year(날짜) : 연도, month(날짜) : 월, day(날짜) : 일
+-- hour(시간) : 시, minute(시간) : 분, second(시간) : 초
+select year(curdate()),month(curdate()),day(curdate());
+-- now() : 현재 시점의 날짜와 시간을 반환
+select now();
+-- datediff(날짜1,날짜2) : 날짜1-날짜2 사이의 일수를 구한다.
+select datediff('2023-1-1',now());
+select datediff(now(),'2000-7-8');
+-- timediff(시간1,시간2) : 시간1-시간2의 결과를 구한다.
+select timediff('19:00:00',time(now()));

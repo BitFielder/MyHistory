@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 15px "NanumSquare", sans-serif;
+    line-height: 1.8;
+    color: #2c2c2c;
+}
+
+h2{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 21px;
+    line-height: 1.375em;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+}

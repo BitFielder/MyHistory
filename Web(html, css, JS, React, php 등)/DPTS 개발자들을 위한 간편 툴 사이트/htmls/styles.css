@@ -1,0 +1,413 @@
+#aaaaaaaaaaa {
+   /*
+   여기서부터가 기본 선언임*/
+}
+
+
+
+body {
+   background-image: url('files/mainbgs.jpg');
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 90vh;
+   flex-direction: column;
+   overflow-y: scroll;
+   scroll-behavior: smooth;
+   margin-bottom: 300px;
+}
+
+
+button {
+   transition: background-color 0.3s;
+   border-radius: 30px;
+   background-color: #f3f3ff;
+   padding: 20px 30px;
+   margin: 40px;
+   font-size: 20px;
+   border: none;
+   font-weight: bold;
+}
+
+
+input {
+   width: 500px;
+   height: 32px;
+   font-size: 15px;
+   border: 0;
+   border-radius: 15px;
+   outline: none;
+   padding-left: 10px;
+   background-color: #f5f5ff;
+ }
+
+
+
+#aaaaaaaaaa {
+   /*
+   여기까지가 기본선인임
+   여기서부터가 호버(마우스 갖다대는거)임
+   */
+}
+
+
+
+#gotomain button:hover {
+   background-color: #affff4;
+}
+
+.tooltip:hover {
+   color: #999999;
+}
+
+#redb:hover {
+   color: #000000;
+   background-color: #ffaaaa;
+}
+
+#yellowb:hover {
+   color: #000000;
+   background-color: #ffff99;
+}
+
+#greenb:hover {
+   color: #000000;
+   background-color: #aaffaa;
+}
+
+#blueb:hover {
+   color: #000000;
+   background-color: #aaffff;
+}
+
+#business-title-btn:hover {
+   background-color: #ffccff;
+}
+
+#quick-link-btn:hover {
+   background-color: #ddbbff;
+}
+
+#count:hover {
+   color: #ffcb22;
+}
+#ipchecker:hover {
+   color: #ff5da1;
+}
+
+#business-title:hover+#business-card-btn {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+#ipv4btn:hover {
+   background-color: #aaffaa;
+}
+#ipv6btn:hover {
+   background-color: #ddbbff;
+}
+
+#asciibtn:hover {
+   color: #000000;
+   background-color: #aaffff;
+}
+
+#downbtn:hover{
+   background-color: #ffff99;
+   
+}
+
+#linkbtn:hover{
+   background-color: #aaffaa;
+   
+}
+
+
+
+
+#aaaaaaaaaa {
+   /*
+   여기까지가 아이디인데 호버 색상들임
+   여기서부터가 진짜아이디임
+   */
+}
+
+
+
+
+
+#gotomain {
+   position: absolute;
+   bottom: 5%;
+   font-weight: bold;
+   transition: background-color 0.3s;
+   text-align: center; /* 텍스트 가운데 정렬 추가 */
+ }
+ 
+ #gotomain h1 {
+   text-align: center; /* 내부 p 요소의 텍스트 가운데 정렬 추가 */
+   margin: 0%;
+   padding: 0%;
+ }
+ #gotomain button {
+   margin: 10pt;
+   text-align: center; /* 내부 p 요소의 텍스트 가운데 정렬 추가 */
+ }
+
+#textbox1 {
+   top: 130px;
+   right: 0px;
+   position: absolute;
+   background-color: #000000;
+   color: #ffffff;
+   padding: 10px;
+   border-radius: 5px;
+   opacity: 0;
+   /* 초기에 투명하게 설정 */
+   transition: opacity 0.7s ease-in-out;
+   /* 투명도에 대한 애니메이션 효과 추가 */
+}
+
+#textbox1.show {
+   opacity: 0.7;
+   /* 나타날 때의 투명도 설정 */
+}
+
+#textbox2 {
+   position: absolute;
+   background-color: #000000;
+   color: #ffffff;
+   padding: 10px;
+   border-radius: 5px;
+   opacity: 0;
+   /* 초기에 투명하게 설정 */
+   transition: opacity 0.7s ease-in-out;
+   /* 투명도에 대한 애니메이션 효과 추가 */
+}
+
+#textbox2.show {
+   opacity: 0.7;
+   /* 나타날 때의 투명도 설정 */
+}
+
+#business-title {
+   top: 200px;
+   right: 0px;
+   position: absolute;
+   display: flex;
+}
+
+#business-title-btn {
+   transition: background-color 0.3s;
+   padding: 10px 30px;
+   font-size: 16px;
+   width: auto;
+   font-weight: bold;
+   margin: 0px;
+}
+
+#business-card-btn {
+   transition: opacity 0.5s, transform 0.5s;
+   transform: translateY(-20px);
+   opacity: 0;
+   border: 2px solid #d7deff;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   background-color: #Ffffff;
+   position: absolute;
+   top: 250px;
+   right: 0px;
+   padding: 0px 20px;
+   font-size: 16px;
+   width: 350px;
+   height: 200px;
+}
+
+#business-card-btn-div {
+   display: flex;
+   flex-direction: column;
+}
+
+#businessimg {
+   width: 120px;
+   height: 160px;
+   margin-right: 10px;
+}
+
+#opinion-btn {
+   position: absolute;
+   top: 180px;
+   right: 1px;
+   padding: 5px 20px;
+   font-size: 16px;
+   width: auto;
+}
+
+#quick-link-btn {
+   transition: background-color 0.3s;
+   padding: 10px 10px;
+   font-size: 16px;
+   width: 400px;
+}
+
+#count {
+   transition: color 0.3s;
+   font-style: italic;
+   font-size: 25pt;
+   margin-top: 0;
+   color: #aaaaaa;
+   margin-bottom: 30px;
+   text-align: center;
+}
+#ipchecker {
+   font-weight: bold;
+   transition: color 0.3s;
+   font-size: 30pt;
+   color: #8981ff;
+   text-align: center;
+}
+
+#ipv4btn {
+   transition: background-color 0.3s;
+   font-weight: bold;
+}
+#ipv6btn {
+   transition: background-color 0.3s;
+   font-weight: bold;
+}
+
+#ipv6tips{
+   text-align: center;
+}
+
+#ipv6allow{
+   text-align: center;
+   display: block;
+}
+#ipv6deny{
+   color: #929292;
+   text-align: center;
+   display: none;
+}
+
+#ascii{
+   align-items: center;
+   position: absolute;
+   top: 20%;
+}
+
+#selecttable{
+   align-items: center;
+   position: absolute;
+   top: 20%;
+   right: 2%;
+   background-color: #f3f3ff;
+   padding: 30px; 
+   border-radius: 20px;
+}
+
+#marginzero{
+   margin: 0%;
+   padding: 0%;
+}
+
+#asciidoct {
+   display: none;
+}
+
+#asciibtn {
+   transition: background-color 0.3s;
+   font-weight: bold;
+}
+
+#svimg{
+   width: 600px;
+}
+
+#aaaaaaaaaaaa {
+   /*여기까지가 아이디임
+   여기서부터가 클래스임*/
+}
+
+
+
+
+.mainbuttoninfo {
+   margin: 0px;
+}
+
+.subbuttoninfo {
+   font-size: 20px;
+   margin: 0px;
+   color: #9999ff;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.slot-btn {
+   overflow: hidden;
+   color: #000000;
+   border: none;
+   transition: background-color 0.3s;
+   width: 250px;
+   height: 250px;
+   border-radius: 25%;
+   font-size: 30px;
+   align-items: center;
+   justify-content: center;
+   margin: 50px;
+   font-weight: bold;
+
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   height: 100%;
+   position: relative;
+}
+
+.button-container {
+   display: flex;
+   justify-content: center;
+}
+
+.subtitle {
+   font-style: italic;
+   font-size: 25pt;
+   margin-top: 0;
+   margin-bottom: 30px;
+   color: #8888ff;
+   text-align: center;
+   opacity: 0;
+   transition: opacity 0.3s, transform 0.3s;
+   transform: translateY(-20px);
+}
+
+.tooltip {
+   color: #000000;
+   font-weight: bold;
+   font-size: 100pt;
+   margin-top: 50pt;
+   margin-bottom: 0;
+   text-align: center;
+   position: relative;
+   transition: color 0.5s;
+}
+
+.tooltip:hover+.subtitle {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+}

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Task ID="cxetcdic-cbym-kkaq-uvuk-ppnfdmmszlgl" Index="0" X="0" Y="0" HasBreakPoint="false" FileName="T_GB.awx" RelativeFilePath="T_GB\T_GB.awx" IsShared="false">
+  <Version>3.0.0.0</Version>
+  <Description />
+  <Type>PROCESS</Type>
+  <Variables>
+    <Variable ID="c1a79de8-0e2f-4127-8c67-4b719fe66146" Name="br_A" Type="AWorks.Application.Browser" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="e228ee7b-c018-4431-a581-351aaf3f7948" Name="n_index" Type="Int" Scope="Local" Range="Task" ErrorPropertyContent="">0</Variable>
+    <Variable ID="ca695a7a-094a-4e7e-b603-4e42df60d146" Name="wb_Excel" Type="Workbook" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="049c4af5-8b1f-4ff1-9f2e-f5a12c244d96" Name="str_HakBu" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="66cb9cb8-a8ad-4c92-9ba8-da5147e06a84" Name="str_Department" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="dd250470-e576-4a8f-9f3b-568b2fa89f00" Name="n_index2" Type="Int" Scope="Local" Range="Task" ErrorPropertyContent="">0</Variable>
+    <Variable ID="6c59dd7b-44fb-4ae2-b717-a4b4ac43194f" Name="str_name" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="355e4959-0753-4511-8e24-85bbdb8536d0" Name="str_Position" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="5d078ae9-c9f8-4e37-aac7-5568d9941009" Name="str_Subject" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="dc24e602-7108-4acd-bb7d-faeb12fa8c97" Name="str_laboratory" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="2cb52266-6ac7-475e-9da3-8e727dfe0bdf" Name="str_Mail" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="874618f3-fab9-4596-b3b4-615dfce29157" Name="str_Phone" Type="String" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+    <Variable ID="0c37500a-3b20-4373-a7e0-81cfd80e96a3" Name="dt_InputData" Type="DataTable" Scope="Local" Range="Task" ErrorPropertyContent="">eyAgIkNvbHVtbnMiOiBbICAgIHsgICAgICAiQ29sdW1uRGF0YVR5cGUiOiAiU3lzdGVtLlN0cmluZyIsICAgICAgIkNvbHVtbk1heExlbmd0aCI6IDEwMCwgICAgICAiQ29sdW1uQWxsb3dOdWxsIjogdHJ1ZSwgICAgICAiQ29sdW1uVW5pcXVlVmFsdWUiOiBmYWxzZSwgICAgICAiT2JqZWN0RGVmYXVsdFZhbHVlVHlwZSI6ICJTeXN0ZW0uU3RyaW5nIiwgICAgICAiQ29sdW1uRGVmYXVsdFZhbHVlIjogbnVsbCwgICAgICAiQ29sdW1uTmFtZSI6ICLtlZnrtoAiLCAgICAgICJyb3dzIjogW10gICAgfSwgICAgeyAgICAgICJDb2x1bW5EYXRhVHlwZSI6ICJTeXN0ZW0uU3RyaW5nIiwgICAgICAiQ29sdW1uTWF4TGVuZ3RoIjogMTAwLCAgICAgICJDb2x1bW5BbGxvd051bGwiOiB0cnVlLCAgICAgICJDb2x1bW5VbmlxdWVWYWx1ZSI6IGZhbHNlLCAgICAgICJPYmplY3REZWZhdWx0VmFsdWVUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5EZWZhdWx0VmFsdWUiOiBudWxsLCAgICAgICJDb2x1bW5OYW1lIjogIu2VmeqzvCIsICAgICAgInJvd3MiOiBbXSAgICB9LCAgICB7ICAgICAgIkNvbHVtbkRhdGFUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5NYXhMZW5ndGgiOiAxMDAsICAgICAgIkNvbHVtbkFsbG93TnVsbCI6IHRydWUsICAgICAgIkNvbHVtblVuaXF1ZVZhbHVlIjogZmFsc2UsICAgICAgIk9iamVjdERlZmF1bHRWYWx1ZVR5cGUiOiAiU3lzdGVtLlN0cmluZyIsICAgICAgIkNvbHVtbkRlZmF1bHRWYWx1ZSI6IG51bGwsICAgICAgIkNvbHVtbk5hbWUiOiAi6rWQ7IiYIiwgICAgICAicm93cyI6IFtdICAgIH0sICAgIHsgICAgICAiQ29sdW1uRGF0YVR5cGUiOiAiU3lzdGVtLlN0cmluZyIsICAgICAgIkNvbHVtbk1heExlbmd0aCI6IDEwMCwgICAgICAiQ29sdW1uQWxsb3dOdWxsIjogdHJ1ZSwgICAgICAiQ29sdW1uVW5pcXVlVmFsdWUiOiBmYWxzZSwgICAgICAiT2JqZWN0RGVmYXVsdFZhbHVlVHlwZSI6ICJTeXN0ZW0uU3RyaW5nIiwgICAgICAiQ29sdW1uRGVmYXVsdFZhbHVlIjogbnVsbCwgICAgICAiQ29sdW1uTmFtZSI6ICLsp4HsnIQiLCAgICAgICJyb3dzIjogW10gICAgfSwgICAgeyAgICAgICJDb2x1bW5EYXRhVHlwZSI6ICJTeXN0ZW0uU3RyaW5nIiwgICAgICAiQ29sdW1uTWF4TGVuZ3RoIjogMTAwLCAgICAgICJDb2x1bW5BbGxvd051bGwiOiB0cnVlLCAgICAgICJDb2x1bW5VbmlxdWVWYWx1ZSI6IGZhbHNlLCAgICAgICJPYmplY3REZWZhdWx0VmFsdWVUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5EZWZhdWx0VmFsdWUiOiBudWxsLCAgICAgICJDb2x1bW5OYW1lIjogIuuLtOuLueqzvOuqqSIsICAgICAgInJvd3MiOiBbXSAgICB9LCAgICB7ICAgICAgIkNvbHVtbkRhdGFUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5NYXhMZW5ndGgiOiAxMDAwLCAgICAgICJDb2x1bW5BbGxvd051bGwiOiB0cnVlLCAgICAgICJDb2x1bW5VbmlxdWVWYWx1ZSI6IGZhbHNlLCAgICAgICJPYmplY3REZWZhdWx0VmFsdWVUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5EZWZhdWx0VmFsdWUiOiBudWxsLCAgICAgICJDb2x1bW5OYW1lIjogIuyXsOq1rOyLpCIsICAgICAgInJvd3MiOiBbXSAgICB9LCAgICB7ICAgICAgIkNvbHVtbkRhdGFUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5NYXhMZW5ndGgiOiAxMDAwLCAgICAgICJDb2x1bW5BbGxvd051bGwiOiB0cnVlLCAgICAgICJDb2x1bW5VbmlxdWVWYWx1ZSI6IGZhbHNlLCAgICAgICJPYmplY3REZWZhdWx0VmFsdWVUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5EZWZhdWx0VmFsdWUiOiBudWxsLCAgICAgICJDb2x1bW5OYW1lIjogIuydtOuplOydvCIsICAgICAgInJvd3MiOiBbXSAgICB9LCAgICB7ICAgICAgIkNvbHVtbkRhdGFUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5NYXhMZW5ndGgiOiAxMDAwLCAgICAgICJDb2x1bW5BbGxvd051bGwiOiB0cnVlLCAgICAgICJDb2x1bW5VbmlxdWVWYWx1ZSI6IGZhbHNlLCAgICAgICJPYmplY3REZWZhdWx0VmFsdWVUeXBlIjogIlN5c3RlbS5TdHJpbmciLCAgICAgICJDb2x1bW5EZWZhdWx0VmFsdWUiOiBudWxsLCAgICAgICJDb2x1bW5OYW1lIjogIuyXsOudveyymCIsICAgICAgInJvd3MiOiBbXSAgICB9ICBdfQ==</Variable>
+    <Variable ID="11e9e4f8-4a33-490a-b837-83cca027904b" Name="n_page" Type="Int" Scope="Local" Range="Task" ErrorPropertyContent="">0</Variable>
+    <Variable ID="a65987d7-a830-4ef7-a49a-6c293a068ae4" Name="is_ExistFile" Type="Bool" Scope="Local" Range="Task" ErrorPropertyContent="">False</Variable>
+    <Variable ID="62051c5e-0e66-449f-b045-dcd3cff75026" Name="total" Type="Int" Scope="Local" Range="Task" ErrorPropertyContent="">0</Variable>
+  </Variables>
+  <List Key="" IsCollapsed="false">
+    <StartNodeID>Start</StartNodeID>
+    <Nodes>
+      <StartBlock ID="Start" Index="0" X="360" Y="100" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="">
+        <ClassExpression IsError="false">
+          <ClassDefinitions />
+        </ClassExpression>
+        <ProcessOutput>
+          <OutputVariables />
+        </ProcessOutput>
+      </StartBlock>
+      <OpenBrowser ID="wctslqal-yqea-ugia-kxte-zdfwtttmbpxm" Index="2" X="360" Y="274" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="경복대 학과안내" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Url="&quot;https://www.kbu.ac.kr/kor/CMS/DeptIntro/intro.do?mCode=MN017&quot;" BrowserType="Edge" Browser="br_A" WaitTime="30000" />
+      <ExcelScope ID="vluedvdz-omao-jstj-hzwd-fbwejlmnneyv" Index="48" X="304" Y="4593" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="엑셀 작업" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" FilePath="&quot;C:\\Users\\BITFIELDER\\Desktop\\RPA과제.xlsx&quot;" CreateNewFile="True" ReadPassword="" UpdateLinks="False" AutoSave="True" AutoClose="True" Visible="True" Workbook="wb_Excel" ExistingWorkbook="">
+        <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+          <StartNodeID>oehxapnv-cxys-xmzr-ldwa-katvdrtmwmtm</StartNodeID>
+          <Nodes>
+            <WriteSheetRange ID="oehxapnv-cxys-xmzr-ldwa-katvdrtmwmtm" Index="49" X="360" Y="4715" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="읽어온 데이터 쓰기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" SheetName="&quot;리스트&quot;" Range="" DataTable="dt_InputData" ColumnHeaders="True" NewSheet="True" />
+            <TryCatch ID="tybodvrw-rvvz-nujv-btyk-tklpxkctlysw" Index="50" X="336" Y="4819" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false">
+              <Try Key="" IsCollapsed="false" ErrorPropertyName="">
+                <StartNodeID>waknfmhh-yqlv-gzdj-yfub-mhdallaiocez</StartNodeID>
+                <Nodes>
+                  <DeleteSheet ID="waknfmhh-yqlv-gzdj-yfub-mhdallaiocez" Index="51" X="360" Y="4909" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="기본 생성 시트 제거" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" SheetName="&quot;sheet1&quot;" SheetIndex="" />
+                </Nodes>
+              </Try>
+              <Exception Key="" IsCollapsed="false">
+                <StartNodeID />
+                <Nodes />
+              </Exception>
+              <Exceptions>
+                <Exception Index="0">
+                  <Nodes Key="" IsCollapsed="false">
+                    <StartNodeID />
+                    <Nodes />
+                  </Nodes>
+                  <Variable ID="bed9c0ff-e60d-4bc0-8fa9-72f264ca7e1c" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                </Exception>
+              </Exceptions>
+              <Finally Key="" IsCollapsed="false" ErrorPropertyName="">
+                <StartNodeID />
+                <Nodes />
+              </Finally>
+            </TryCatch>
+            <SaveWorkbook ID="rvkdviok-jqcp-wkuv-jvwt-tsvurlpzukvf" Index="52" X="360" Y="5271" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" />
+          </Nodes>
+        </Loop>
+      </ExcelScope>
+      <KillProcess ID="skybfamd-cphe-bxyk-amlo-kpcokltjwazp" Index="1" X="360" Y="170" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="엣지 닫기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" ProcessName="&quot;msedge&quot;" WaitTime="30000" />
+      <KillProcess ID="mdhyxdnj-eral-fssn-bfno-wveukipgubhj" Index="53" X="360" Y="5397" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="엣지 닫기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" ProcessName="&quot;msedge&quot;" WaitTime="30000" />
+      <If ID="byjncfjx-rmtk-uhhd-dupf-wqlmirwqhyav" Index="46" X="196" Y="4327" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="파일이 존재하는가?" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Condition="is_ExistFile">
+        <Then Key="" IsCollapsed="false" ErrorPropertyName="">
+          <StartNodeID>trtionai-ohbk-czxz-gijy-thicmxfchslj</StartNodeID>
+          <Nodes>
+            <DeleteFile ID="trtionai-ohbk-czxz-gijy-thicmxfchslj" Index="47" X="220" Y="4422" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="기존 파일 제거" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" SourcePath="&quot;C:\\Users\\BITFIELDER\\Desktop\\RPA과제.xlsx&quot;" PermanentlyDelete="True" />
+          </Nodes>
+        </Then>
+        <Else Key="" IsCollapsed="false" ErrorPropertyName="">
+          <StartNodeID />
+          <Nodes />
+        </Else>
+      </If>
+      <ExistFile ID="rcpandzq-uwib-qyaz-ftce-ecczibdmylwc" Index="45" X="360" Y="4223" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="기존 파일 확인" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" SourcePath="&quot;C:\\Users\\BITFIELDER\\Desktop\\RPA과제.xlsx&quot;" Result="is_ExistFile" />
+      <RemoveDuplicatedRows ID="qcdvqqqt-icqm-powu-wlio-ftmoapslanri" Index="44" X="360" Y="4119" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="" Description="" IsContinueRun="false" IsDisable="false" Timeout="0">
+        <DataTable>dt_InputData</DataTable>
+        <Result>dt_InputData</Result>
+      </RemoveDuplicatedRows>
+      <For ID="xpajzxkj-msnp-tulb-udbl-tjwjhlmzbahi" Index="3" X="76" Y="378" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="학부 수 만큼 반복" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Initializer="int i = 0" Condition="i &lt; 2" Iterator="i++">
+        <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+          <StartNodeID>dcrgalpx-aqyu-jqry-sivq-xueostrvioqj</StartNodeID>
+          <Nodes>
+            <GetText ID="dcrgalpx-aqyu-jqry-sivq-xueostrvioqj" Index="4" X="360" Y="488" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="dcrgalpx-aqyu-jqry-sivq-xueostrvioqj_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="학부 이름 얻기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='11' process_name='msedge.exe' title_name='*' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' tag='H3' idx='&quot;+i+&quot;'/&gt;&lt;webctrl distance='0' aaname='*' parentid='cont' tag='SPAN' idx='0'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='11' TRUE__process_name='msedge.exe' TRUE__title_name='학과안내 | 경복대학교' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='2'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__tag='H3' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__aaname='*' TRUE__parentid='cont' TRUE__tag='SPAN' TRUE__idx='0'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="30000" Result="str_HakBu" />
+            <Assign ID="psfbodom-ipgz-fwui-umwe-gljtpbqkontz" Index="5" X="360" Y="592" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="학과 index 변수" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="0" Target="n_index" />
+            <While ID="ufxcxlpb-cenx-rjub-zlnq-vqwyifdfdglm" Index="6" X="108" Y="696" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="모든 학과 정보를 얻을때까지 반복" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Condition="true">
+              <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+                <StartNodeID>rtjxgwqv-hbbk-prac-jnsy-ufvitnzzdwoc</StartNodeID>
+                <Nodes>
+                  <TryCatch ID="rtjxgwqv-hbbk-prac-jnsy-ufvitnzzdwoc" Index="7" X="336" Y="818" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false">
+                    <Try Key="" IsCollapsed="false" ErrorPropertyName="">
+                      <StartNodeID>uqzrfzaq-ephq-zbwv-tecj-dlwlrfwdbczp</StartNodeID>
+                      <Nodes>
+                        <GetText ID="uqzrfzaq-ephq-zbwv-tecj-dlwlrfwdbczp" Index="8" X="360" Y="908" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="uqzrfzaq-ephq-zbwv-tecj-dlwlrfwdbczp_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="학과 이름 얻기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='학과안내 | 경복대학교' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='5' parentid='cont' tag='DIV' idx='2'/&gt;&lt;webctrl distance='3' parentid='cont' tag='UL' idx='&quot;+i+&quot;'/&gt;&lt;webctrl distance='2' parentid='cont' tag='LI' idx='&quot;+n_index+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='SPAN'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='학과안내 | 경복대학교' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;TRUE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='2'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='2'/&gt;&lt;TRUE__webctrl TRUE__distance='3' TRUE__parentid='cont' TRUE__tag='UL' TRUE__idx='3'/&gt;&lt;TRUE__webctrl TRUE__distance='2' TRUE__parentid='cont' TRUE__tag='LI' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='1' TRUE__aaname=' &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;작업치료학과 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;' TRUE__parentid='cont' TRUE__tag='A' FALSE__idx='-1'/&gt;&lt;TRUE__webctrl TRUE__distance='0' FALSE__aaname='작업치료학과' TRUE__parentid='cont' TRUE__tag='SPAN' FALSE__idx='-1'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="3000" Result="str_Department" />
+                      </Nodes>
+                    </Try>
+                    <Exception Key="" IsCollapsed="false">
+                      <StartNodeID />
+                      <Nodes />
+                    </Exception>
+                    <Exceptions>
+                      <Exception Index="0">
+                        <Nodes Key="" IsCollapsed="false">
+                          <StartNodeID />
+                          <Nodes>
+                            <Break ID="mbklevfs-ekgw-mrtr-rzxa-pfgqyzbdlakq" Index="9" X="360" Y="1030" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" />
+                          </Nodes>
+                        </Nodes>
+                        <Variable ID="2984d6d6-ca0d-4de9-b40b-de48372f56e8" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                      </Exception>
+                    </Exceptions>
+                    <Finally Key="" IsCollapsed="false" ErrorPropertyName="">
+                      <StartNodeID />
+                      <Nodes />
+                    </Finally>
+                  </TryCatch>
+                  <InvisibleAreaClick ID="oqlrgyfb-mweg-ydeb-zzmn-xcyhutmeubhe" Index="10" X="360" Y="1304" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="해당 학과 클릭" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" OriginSelector="" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='학과안내 | 경복대학교' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='5' parentid='cont' tag='DIV' idx='2'/&gt;&lt;webctrl distance='3' parentid='cont' tag='UL' idx='&quot;+i+&quot;'/&gt;&lt;webctrl distance='2' parentid='cont' tag='LI' idx='&quot;+n_index+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='SPAN'/&gt;&lt;/root&gt;&quot;" SelectorVariable="" RetryTime="30000" OffsetX="0" OffsetY="0" />
+                  <InvisibleAreaClick ID="apivgclt-tvnt-basv-vzem-owslsewmlagk" Index="11" X="360" Y="1408" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="apivgclt-tvnt-basv-vzem-owslsewmlagk_screenshot.dat" BeforeWaitTime="500" AfterWaitTime="0" TitleName="교수진 소개 클릭" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='15' TRUE__process_name='msedge.exe' TRUE__title_name='*' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='14' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='13' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='12' TRUE__tag='HEADER' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__id='header' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='mainNavi-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__id='menu-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__tag='NAV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__parentid='mainNavi' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__parentid='mainNavi' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='mainNavi' TRUE__tag='LI' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div' TRUE__parentid='mainNavi' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;ul' TRUE__parentid='mainNavi' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;ul&amp;gt;li' TRUE__parentid='mainNavi' TRUE__tag='LI' TRUE__idx='6'/&gt;&lt;FALSE__webctrl TRUE__distance='1' TRUE__aaname=' &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;교수진소개 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;' TRUE__parentid='mainNavi' TRUE__tag='A' FALSE__idx='-1'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__aaname='교수진*소개' TRUE__parentid='mainNavi' TRUE__tag='SPAN' FALSE__idx='-1'/&gt;&lt;/root&gt;" Selector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='15' process_name='msedge.exe' title_name='*' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='0' aaname='교수진*소개' parentid='mainNavi' tag='SPAN'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="30000" OffsetX="0" OffsetY="0" />
+                  <Assign ID="rzbnjtvc-cmvz-qnwc-nlsy-ytbfczvlbpzd" Index="12" X="360" Y="1512" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="교수 index2 변수" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="0" Target="n_index2" />
+                  <Assign ID="ltwrpgcg-hnje-ksip-tqmf-lgpnbzqhwlrp" Index="13" X="360" Y="1616" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="페이지 변수" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="1" Target="n_page" />
+                  <While ID="lblhioxn-ioev-yvxa-hakw-bacshiqxijci" Index="14" X="140" Y="1720" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="해당 학과에 모든 교수 정보 얻기" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Condition="true">
+                    <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+                      <StartNodeID>lmmflusy-ycis-vavd-ouhd-vbgtwgyccuwg</StartNodeID>
+                      <Nodes>
+                        <Block ID="lmmflusy-ycis-vavd-ouhd-vbgtwgyccuwg" Index="15" X="328" Y="1842" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="세부 정보 얻기" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false">
+                          <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+                            <StartNodeID>lgmglzwm-nqux-dons-yjuy-dfiyrgpvimmx</StartNodeID>
+                            <Nodes>
+                              <TryCatch ID="lgmglzwm-nqux-dons-yjuy-dfiyrgpvimmx" Index="16" X="360" Y="1907" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>kgdoqxre-evrp-emql-loze-jfeesewbeafg</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="kgdoqxre-evrp-emql-loze-jfeesewbeafg" Index="17" X="12" Y="90" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="kgdoqxre-evrp-emql-loze-jfeesewbeafg_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="교수 이름 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개*' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' tag='H4' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' aaname='*' parentid='cont' tag='SPAN' idx='0'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개*' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__tag='H4' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__aaname='*' TRUE__parentid='cont' TRUE__tag='SPAN' TRUE__idx='0'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="2000" Result="str_name" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Break ID="anraculd-sevc-ahed-fgtj-urefgrqeqjfk" Index="18" X="12" Y="3890" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="a8c25748-b5a5-4d46-a260-c8c17a577a78" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <TryCatch ID="psaqwkwc-azxs-rhwu-rnpn-opozjxgdhrfo" Index="19" X="360" Y="1977" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>mskfosrk-jafb-revx-lpeh-bguhczgosrtj</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="mskfosrk-jafb-revx-lpeh-bguhczgosrtj" Index="20" X="12" Y="90" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="mskfosrk-jafb-revx-lpeh-bguhczgosrtj_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="직위 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개*' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' tag='H4' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' aaname='*' parentid='cont' tag='SPAN' idx='1'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개*' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__tag='H4' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__aaname='*' TRUE__parentid='cont' TRUE__tag='SPAN' TRUE__idx='1'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="1000" Result="str_Position" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Assign ID="vccswdsv-htyx-sqeo-sssb-ifagkzjqevht" Index="21" X="12" Y="128" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="직위 값 없음" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="&quot; &quot;" Target="str_Position" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="fb9c4455-37f8-47c6-b436-ccc85ff5846e" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <TryCatch ID="eglqdymm-jfhr-zphf-zzsu-jispcwixucql" Index="22" X="360" Y="2047" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>pkyekdbr-twbx-jenf-htnt-ihiyxwlkxjbm</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="pkyekdbr-twbx-jenf-htnt-ihiyxwlkxjbm" Index="23" X="0" Y="89" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="pkyekdbr-twbx-jenf-htnt-ihiyxwlkxjbm_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="담당과목 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개 *' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' parentid='cont' tag='UL' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='LI' idx='0'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개 *' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__parentid='cont' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__parentid='cont' TRUE__tag='LI' TRUE__idx='0'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="3000" Result="str_Subject" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Assign ID="wwrpbzja-oqpo-mfni-aoav-tudesbhqsijh" Index="24" X="0" Y="2024" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="담당과목 값 없음" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="&quot; &quot;" Target="str_Subject" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="c7d1962c-2e7c-4417-a8e6-a5096f3d4fab" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <TryCatch ID="ieynplav-xvjx-prza-ubou-ypybtnxzssif" Index="25" X="360" Y="2117" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>vplrtiqp-cdjh-bght-bnyh-ftkfxccpldss</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="vplrtiqp-cdjh-bght-bnyh-ftkfxccpldss" Index="26" X="0" Y="89" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="vplrtiqp-cdjh-bght-bnyh-ftkfxccpldss_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="연구실 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개 *' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' parentid='cont' tag='UL' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='LI' idx='1'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개 *' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__parentid='cont' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__parentid='cont' TRUE__tag='LI' TRUE__idx='1'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="1000" Result="str_laboratory" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Assign ID="vcbzbcjw-svge-ybon-mnbe-grwizpwfjkxw" Index="27" X="0" Y="2094" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="연구실 값 없음" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="&quot; &quot;" Target="str_laboratory" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="64ac9d97-a409-4374-b4b0-f47226f79e25" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <TryCatch ID="yjffwswt-peya-kegj-shho-avkyzapxtlrc" Index="28" X="360" Y="2187" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>gvgbtedd-zpfy-xnfw-snne-tmebeftrfbdy</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="gvgbtedd-zpfy-xnfw-snne-tmebeftrfbdy" Index="29" X="24" Y="2337" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="gvgbtedd-zpfy-xnfw-snne-tmebeftrfbdy_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="이메일 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개 *' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' parentid='cont' tag='UL' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='LI' idx='2'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개 *' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__parentid='cont' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__parentid='cont' TRUE__tag='LI' TRUE__idx='2'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="1000" Result="str_Mail" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Assign ID="zsfvrsxx-ffgs-bqxp-yvkb-lateftzmfdmi" Index="30" X="24" Y="128" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="이메일 값 없음" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="&quot; &quot;" Target="str_Mail" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="ce92f059-9bb0-44a5-8a87-fa44ab6284a9" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <TryCatch ID="cvjvykpe-phwr-ttkn-piov-ydouorsbdigb" Index="31" X="360" Y="2257" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="true" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID>lqbgafzw-kvip-nmhk-wgxx-qnzuqexnkmxy</StartNodeID>
+                                  <Nodes>
+                                    <GetText ID="lqbgafzw-kvip-nmhk-wgxx-qnzuqexnkmxy" Index="32" X="24" Y="90" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="lqbgafzw-kvip-nmhk-wgxx-qnzuqexnkmxy_screenshot.dat" BeforeWaitTime="0" AfterWaitTime="0" TitleName="연락처 get" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='12' process_name='msedge.exe' title_name='교수진소개 *' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='1' parentid='cont' tag='UL' idx='&quot;+n_index2+&quot;'/&gt;&lt;webctrl distance='0' parentid='cont' tag='LI' idx='3'/&gt;&lt;/root&gt;&quot;" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='12' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개 *' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='11' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='1'/&gt;&lt;TRUE__webctrl TRUE__distance='1' TRUE__parentid='cont' TRUE__tag='UL' TRUE__idx='0'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__parentid='cont' TRUE__tag='LI' TRUE__idx='3'/&gt;&lt;/root&gt;" SelectorVariable="" RetryTime="1000" Result="str_Phone" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="true">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Assign ID="pcluzikd-emva-opou-cesr-zyfibbsmepbr" Index="33" X="24" Y="2234" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="연락처 값 없음" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="&quot; &quot;" Target="str_Phone" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="e4a5b5db-0106-4dbe-ba74-01ef5e428719" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="true" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                            </Nodes>
+                          </Loop>
+                        </Block>
+                        <CodeExpression ID="eyfauxbq-jmnf-hagb-onig-hngiilukehmj" Index="34" X="360" Y="2350" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="DataRow 만들기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" CodeExpression="// 새로운 행(row) 생성&#xD;&#xA;DataRow newRow = dt_InputData.NewRow();&#xD;&#xA;newRow[&quot;학부&quot;] = str_HakBu;&#xD;&#xA;newRow[&quot;학과&quot;] = str_Department;&#xD;&#xA;newRow[&quot;직위&quot;] = str_Position;&#xD;&#xA;newRow[&quot;교수&quot;] = str_name;&#xD;&#xA;&#xD;&#xA;string[] arr_str_Data = new string[4]; // 변수가 많은 데이터들&#xD;&#xA;arr_str_Data[0] = str_Subject; // 담당과목&#xD;&#xA;arr_str_Data[1] = str_laboratory; // 연구실&#xD;&#xA;arr_str_Data[2] = str_Mail;&#x9; // 이메일&#xD;&#xA;arr_str_Data[3] = str_Phone; // 연락처&#xD;&#xA;&#xD;&#xA;for(int j=0;j&lt;arr_str_Data.Length;j++){ // 각 데이터를 맞는 Column에 대입&#xD;&#xA;&#x9;if(arr_str_Data[j].Contains(&quot;담당과목&quot;)){&#xD;&#xA;&#x9;&#x9;arr_str_Data[j]=arr_str_Data[j].Replace(&quot;담당과목&quot;,&quot;&quot;); // 필요없는 부분 제거&#xD;&#xA;&#x9;&#x9;newRow[&quot;담당과목&quot;] = arr_str_Data[j]; // 현재 데이터는 담당과목&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if(arr_str_Data[j].Contains(&quot;연구실&quot;)){&#xD;&#xA;&#x9;&#x9;arr_str_Data[j]=arr_str_Data[j].Replace(&quot;연구실&quot;,&quot;&quot;); // 필요없는 부분 제거&#xD;&#xA;&#x9;&#x9;newRow[&quot;연구실&quot;] = arr_str_Data[j]; // 현재 데이터는 연구실&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if(arr_str_Data[j].Contains(&quot;이메일&quot;)){&#xD;&#xA;&#x9;&#x9;arr_str_Data[j]=arr_str_Data[j].Replace(&quot;이메일&quot;,&quot;&quot;); // 필요없는 부분 제거&#xD;&#xA;&#x9;&#x9;newRow[&quot;이메일&quot;] = arr_str_Data[j]; // 현재 데이터는 이메일&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if(arr_str_Data[j].Contains(&quot;연락처&quot;)){&#xD;&#xA;&#x9;&#x9;arr_str_Data[j]=arr_str_Data[j].Replace(&quot;연락처&quot;,&quot;&quot;); // 필요없는 부분 제거&#xD;&#xA;&#x9;&#x9;newRow[&quot;연락처&quot;] = arr_str_Data[j]; // 현재 데이터는 연락처&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if(arr_str_Data[j].Contains(&quot;근무지&quot;)){&#xD;&#xA;&#x9;&#x9;arr_str_Data[j]=arr_str_Data[j].Replace(&quot;근무지&quot;,&quot;근무지 : &quot;); // 군무지 부분은 표시&#xD;&#xA;&#x9;&#x9;newRow[&quot;연구실&quot;] = arr_str_Data[j]; // 근무지는 몇몇 특수한 교수들만 있어서 연구실 Column으로 대체&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;// 행을 DataTable에 추가&#xD;&#xA;dt_InputData.Rows.Add(newRow);" Editing="False" />
+                        <Assign ID="aegwbfzk-faaf-oyej-oozo-rjizigielzfo" Index="35" X="360" Y="2454" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="다음 객체 index" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="n_index2+1" Target="n_index2" />
+                        <If ID="pwhztbeg-pfxa-yydu-siuo-rylqwgovwuyf" Index="36" X="172" Y="2558" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="10번마다 다음 페이지로 이동" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Condition="n_index2%10 == 0">
+                          <Then Key="" IsCollapsed="false" ErrorPropertyName="">
+                            <StartNodeID>ecsezvde-bxqy-bpbr-dkay-luyzaplktpqy</StartNodeID>
+                            <Nodes>
+                              <TryCatch ID="ecsezvde-bxqy-bpbr-dkay-luyzaplktpqy" Index="37" X="196" Y="2653" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false">
+                                <Try Key="" IsCollapsed="false" ErrorPropertyName="">
+                                  <StartNodeID>nupjlyoa-drgr-bczm-mkfh-qztqtecdinal</StartNodeID>
+                                  <Nodes>
+                                    <InvisibleAreaClick ID="nupjlyoa-drgr-bczm-mkfh-qztqtecdinal" Index="38" X="220" Y="2743" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="nupjlyoa-drgr-bczm-mkfh-qztqtecdinal_screenshot.dat" BeforeWaitTime="500" AfterWaitTime="0" TitleName="다음페이지 클릭" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" WaitForLoading="None" OriginSelector="&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;ALWAYS__app TRUE__distance='11' TRUE__process_name='msedge.exe' TRUE__title_name='교수진소개 *' TRUE__class_name='Chrome_WidgetWin_1' TRUE__selector_mode='edge_chromium' TRUE__v='2.3'/&gt;&lt;FALSE__webctrl TRUE__distance='10' TRUE__tag='BODY' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='9' TRUE__id='doc-wrap' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='8' TRUE__tag='ARTICLE' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='7' TRUE__id='container' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='6' TRUE__id='contents' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='5' TRUE__id='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='4' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='0'/&gt;&lt;FALSE__webctrl TRUE__distance='3' TRUE__aaname=' &#x9;&#x9; &#x9;' TRUE__parentid='cont' TRUE__tag='DIV' FALSE__idx='-1'/&gt;&lt;FALSE__webctrl TRUE__distance='2' TRUE__css-selector='body&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' TRUE__parentid='cont' TRUE__tag='DIV' TRUE__idx='10'/&gt;&lt;FALSE__webctrl TRUE__distance='1' TRUE__aaname='2' TRUE__parentid='cont' TRUE__tag='A' FALSE__idx='-1'/&gt;&lt;TRUE__webctrl TRUE__distance='0' TRUE__aaname='2' TRUE__parentid='cont' TRUE__tag='SPAN' FALSE__idx='-1'/&gt;&lt;/root&gt;" Selector="&quot;&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;root&gt;&lt;app distance='11' process_name='msedge.exe' title_name='교수진소개 *' class_name='Chrome_WidgetWin_1' selector_mode='edge_chromium' v='2.3'/&gt;&lt;webctrl distance='0' aaname='&quot;+n_page+&quot;' parentid='cont' tag='SPAN'/&gt;&lt;/root&gt;&quot;" SelectorVariable="" RetryTime="3000" OffsetX="0" OffsetY="0" />
+                                  </Nodes>
+                                </Try>
+                                <Exception Key="" IsCollapsed="false">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Exception>
+                                <Exceptions>
+                                  <Exception Index="0">
+                                    <Nodes Key="" IsCollapsed="false">
+                                      <StartNodeID />
+                                      <Nodes>
+                                        <Break ID="pskthdid-fjag-wnvr-xgek-iytzbkxzpycn" Index="39" X="220" Y="2865" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" />
+                                      </Nodes>
+                                    </Nodes>
+                                    <Variable ID="cd8b3f00-0b72-42fe-9e7d-a8e7395f35b9" Name="ex" Type="AwException" Scope="Alias" Range="Alias"></Variable>
+                                  </Exception>
+                                </Exceptions>
+                                <Finally Key="" IsCollapsed="false" ErrorPropertyName="">
+                                  <StartNodeID />
+                                  <Nodes />
+                                </Finally>
+                              </TryCatch>
+                              <Assign ID="elannyll-rsxv-spug-timk-bebchkqugcgb" Index="40" X="220" Y="3139" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="다음페이지 첫번째 객체 index" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="0" Target="n_index2" />
+                              <Assign ID="qvfhfhxf-iyac-qofa-wmjr-auzfdipqqvkv" Index="41" X="220" Y="3243" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="페이지 변수 +1" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="n_page+1" Target="n_page" />
+                            </Nodes>
+                          </Then>
+                          <Else Key="" IsCollapsed="false" ErrorPropertyName="">
+                            <StartNodeID />
+                            <Nodes />
+                          </Else>
+                        </If>
+                      </Nodes>
+                    </Loop>
+                  </While>
+                  <KeyInput ID="hdbfsues-kpmt-kznq-ipfi-dizndxqjxxcp" Index="42" X="360" Y="3436" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="탭 닫기" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[ctrl[w]]" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="20" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+                  <Assign ID="vtnpmajl-thxn-fmxm-tqkk-czpwwadxrgpn" Index="43" X="360" Y="3540" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="학과 객체 index +1" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="n_index+1" Target="n_index" />
+                  <Assign ID="rtelwayx-tyho-droz-yxyl-uierkztylmqs" Index="56" X="360" Y="3644" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="누적 학과 검색횟수" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Source="total+1" Target="" />
+                  <If ID="vkmdnqvm-vsux-lszz-myea-wdtokxryncun" Index="54" X="196" Y="3748" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" Condition="total&gt;=2">
+                    <Then Key="" IsCollapsed="false" ErrorPropertyName="">
+                      <StartNodeID>vjmocira-oedf-icmw-aopf-lqleinyoacgp</StartNodeID>
+                      <Nodes>
+                        <Break ID="vjmocira-oedf-icmw-aopf-lqleinyoacgp" Index="55" X="220" Y="3843" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" TitleName="" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" />
+                      </Nodes>
+                    </Then>
+                    <Else Key="" IsCollapsed="false" ErrorPropertyName="">
+                      <StartNodeID />
+                      <Nodes />
+                    </Else>
+                  </If>
+                </Nodes>
+              </Loop>
+            </While>
+          </Nodes>
+        </Loop>
+      </For>
+    </Nodes>
+  </List>
+  <Links>
+    <Link Source="Start" Target="skybfamd-cphe-bxyk-amlo-kpcokltjwazp" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="skybfamd-cphe-bxyk-amlo-kpcokltjwazp" Target="wctslqal-yqea-ugia-kxte-zdfwtttmbpxm" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="vluedvdz-omao-jstj-hzwd-fbwejlmnneyv" Target="mdhyxdnj-eral-fssn-bfno-wveukipgubhj" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="byjncfjx-rmtk-uhhd-dupf-wqlmirwqhyav" Target="vluedvdz-omao-jstj-hzwd-fbwejlmnneyv" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="rcpandzq-uwib-qyaz-ftce-ecczibdmylwc" Target="byjncfjx-rmtk-uhhd-dupf-wqlmirwqhyav" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="qcdvqqqt-icqm-powu-wlio-ftmoapslanri" Target="rcpandzq-uwib-qyaz-ftce-ecczibdmylwc" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="waknfmhh-yqlv-gzdj-yfub-mhdallaiocez" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="oehxapnv-cxys-xmzr-ldwa-katvdrtmwmtm" Target="tybodvrw-rvvz-nujv-btyk-tklpxkctlysw" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="tybodvrw-rvvz-nujv-btyk-tklpxkctlysw" Target="rvkdviok-jqcp-wkuv-jvwt-tsvurlpzukvf" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="oehxapnv-cxys-xmzr-ldwa-katvdrtmwmtm" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="trtionai-ohbk-czxz-gijy-thicmxfchslj" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="avjjnvxo-pwdh-hjdm-ajlc-eeubvcrnffoy" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="xpajzxkj-msnp-tulb-udbl-tjwjhlmzbahi" Target="qcdvqqqt-icqm-powu-wlio-ftmoapslanri" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="dcrgalpx-aqyu-jqry-sivq-xueostrvioqj" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="psfbodom-ipgz-fwui-umwe-gljtpbqkontz" Target="ufxcxlpb-cenx-rjub-zlnq-vqwyifdfdglm" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="dcrgalpx-aqyu-jqry-sivq-xueostrvioqj" Target="psfbodom-ipgz-fwui-umwe-gljtpbqkontz" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="apivgclt-tvnt-basv-vzem-owslsewmlagk" Target="rzbnjtvc-cmvz-qnwc-nlsy-ytbfczvlbpzd" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="hdbfsues-kpmt-kznq-ipfi-dizndxqjxxcp" Target="vtnpmajl-thxn-fmxm-tqkk-czpwwadxrgpn" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="lblhioxn-ioev-yvxa-hakw-bacshiqxijci" Target="hdbfsues-kpmt-kznq-ipfi-dizndxqjxxcp" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="ltwrpgcg-hnje-ksip-tqmf-lgpnbzqhwlrp" Target="lblhioxn-ioev-yvxa-hakw-bacshiqxijci" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="rzbnjtvc-cmvz-qnwc-nlsy-ytbfczvlbpzd" Target="ltwrpgcg-hnje-ksip-tqmf-lgpnbzqhwlrp" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="oqlrgyfb-mweg-ydeb-zzmn-xcyhutmeubhe" Target="apivgclt-tvnt-basv-vzem-owslsewmlagk" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="rtjxgwqv-hbbk-prac-jnsy-ufvitnzzdwoc" Target="oqlrgyfb-mweg-ydeb-zzmn-xcyhutmeubhe" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="rtjxgwqv-hbbk-prac-jnsy-ufvitnzzdwoc" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="GroupStart" Target="uqzrfzaq-ephq-zbwv-tecj-dlwlrfwdbczp" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="mbklevfs-ekgw-mrtr-rzxa-pfgqyzbdlakq" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="lmmflusy-ycis-vavd-ouhd-vbgtwgyccuwg" Target="eyfauxbq-jmnf-hagb-onig-hngiilukehmj" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="lmmflusy-ycis-vavd-ouhd-vbgtwgyccuwg" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="aegwbfzk-faaf-oyej-oozo-rjizigielzfo" Target="pwhztbeg-pfxa-yydu-siuo-rylqwgovwuyf" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="eyfauxbq-jmnf-hagb-onig-hngiilukehmj" Target="aegwbfzk-faaf-oyej-oozo-rjizigielzfo" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="yjffwswt-peya-kegj-shho-avkyzapxtlrc" Target="cvjvykpe-phwr-ttkn-piov-ydouorsbdigb" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="ieynplav-xvjx-prza-ubou-ypybtnxzssif" Target="yjffwswt-peya-kegj-shho-avkyzapxtlrc" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="eglqdymm-jfhr-zphf-zzsu-jispcwixucql" Target="ieynplav-xvjx-prza-ubou-ypybtnxzssif" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="psaqwkwc-azxs-rhwu-rnpn-opozjxgdhrfo" Target="eglqdymm-jfhr-zphf-zzsu-jispcwixucql" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="lgmglzwm-nqux-dons-yjuy-dfiyrgpvimmx" Target="psaqwkwc-azxs-rhwu-rnpn-opozjxgdhrfo" SourceConnectorPosition="Next" TargetConnectorPosition="Prev" />
+    <Link Source="GroupStart" Target="lgmglzwm-nqux-dons-yjuy-dfiyrgpvimmx" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="GroupStart" Target="kgdoqxre-evrp-emql-loze-jfeesewbeafg" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="anraculd-sevc-ahed-fgtj-urefgrqeqjfk" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="mskfosrk-jafb-revx-lpeh-bguhczgosrtj" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="vccswdsv-htyx-sqeo-sssb-ifagkzjqevht" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="pkyekdbr-twbx-jenf-htnt-ihiyxwlkxjbm" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="wwrpbzja-oqpo-mfni-aoav-tudesbhqsijh" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="vplrtiqp-cdjh-bght-bnyh-ftkfxccpldss" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="vcbzbcjw-svge-ybon-mnbe-grwizpwfjkxw" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="gvgbtedd-zpfy-xnfw-snne-tmebeftrfbdy" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="zsfvrsxx-ffgs-bqxp-yvkb-lateftzmfdmi" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="lqbgafzw-kvip-nmhk-wgxx-qnzuqexnkmxy" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="pcluzikd-emva-opou-cesr-zyfibbsmepbr" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="ecsezvde-bxqy-bpbr-dkay-luyzaplktpqy" Target="elannyll-rsxv-spug-timk-bebchkqugcgb" SourceConnectorPosition="Next" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="ecsezvde-bxqy-bpbr-dkay-luyzaplktpqy" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="elannyll-rsxv-spug-timk-bebchkqugcgb" Target="qvfhfhxf-iyac-qofa-wmjr-auzfdipqqvkv" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="nupjlyoa-drgr-bczm-mkfh-qztqtecdinal" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="pskthdid-fjag-wnvr-xgek-iytzbkxzpycn" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="GroupStart" Target="vjmocira-oedf-icmw-aopf-lqleinyoacgp" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="wctslqal-yqea-ugia-kxte-zdfwtttmbpxm" Target="xpajzxkj-msnp-tulb-udbl-tjwjhlmzbahi" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="vtnpmajl-thxn-fmxm-tqkk-czpwwadxrgpn" Target="rtelwayx-tyho-droz-yxyl-uierkztylmqs" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="rtelwayx-tyho-droz-yxyl-uierkztylmqs" Target="vkmdnqvm-vsux-lszz-myea-wdtokxryncun" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+  </Links>
+  <Comments />
+</Task>

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.headerspan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerspan a{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.headerspan nav {
+    display: flex;
+    justify-content: right;
+    right: 0;
+}
+
+
+footer {
+    background-color: #555555;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer span {
+    justify-content: space-between;
+}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav a {
+    color: #fff;
+}
+footer nav span{
+    padding-left: 10%;
+}
+footer nav span p{
+    text-align: left;
+}
+
+section {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.photonav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photonav a{
+    color: #000;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.photodiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 최대 3개의 열, 최소 200px 폭, 화면 크기에 따라 조정됨 */
+    gap: 10px; /* 이미지 간의 간격 설정 */
+    max-width: 800px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.contents{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 중간 크기 화면에서 2개의 열로 표시 */
+}
+
+.contentbox {
+    margin: 5%;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #fff3bf;
+    text-align: center;
+    width: 400px;
+}
+
+
+
+@media screen and (min-width: 1800px) {
+
+    .contents {
+        grid-template-columns: repeat(2, 1fr); /* 중간 크기 화면에서 2개의 열로 표시 */
+    }
+  }

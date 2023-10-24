@@ -1,0 +1,4 @@
+FILE *fr, *fw;
+int s_fw;
+char *p_rbuf;
+char rbuf[250], wbuf[250];

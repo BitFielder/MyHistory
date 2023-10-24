@@ -1,0 +1,21 @@
+﻿{
+  "isBackup": false,
+  "userId": "",
+  "organization": "",
+  "fileList": [
+    "test\\test.awx",
+    "t_test2\\t_test2.awx"
+  ],
+  "resource": {
+    "resourcePath": ".Resource",
+    "files": []
+  },
+  "libraryFileList": [],
+  "isUpload": false,
+  "type": "PROCESS",
+  "name": "test",
+  "id": "tmejygvo-bikn-rplo-sayt-woqgmvjhxhem",
+  "version": null,
+  "comment": "",
+  "description": ""
+}

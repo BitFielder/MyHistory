@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Task ID="qlmhdqwk-hjax-vzqi-hxek-xhfceqgiyuyp" Index="0" X="0" Y="0" HasBreakPoint="false" FileName="T_Excel.awx" RelativeFilePath="T_Excel\T_Excel.awx" IsShared="false">
+  <Version>3.0.0.0</Version>
+  <Description />
+  <Type>PROCESS</Type>
+  <Variables>
+    <Variable ID="3a7685af-b053-41fd-b938-5557bfcb1a20" Name="wb_Excel" Type="Workbook" Scope="Local" Range="Task" ErrorPropertyContent=""></Variable>
+  </Variables>
+  <List Key="" IsCollapsed="false">
+    <StartNodeID>Start</StartNodeID>
+    <Nodes>
+      <StartBlock ID="Start" Index="0" X="360" Y="100" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="">
+        <ClassExpression IsError="false">
+          <ClassDefinitions />
+        </ClassExpression>
+        <ProcessOutput>
+          <OutputVariables />
+        </ProcessOutput>
+      </StartBlock>
+      <ExcelScope ID="hmgkdasd-qnof-ynlg-xvaq-azblnasomeke" Index="1" X="328" Y="170" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="엑셀 작업" Description="" IsCollapsed="false" IsContinueRun="false" IsDisable="false" FilePath="&quot;C:\\Users\\BITFIELDER\\Desktop\\RPA과제.xlsx&quot;" CreateNewFile="False" ReadPassword="" UpdateLinks="False" AutoSave="True" AutoClose="True" Visible="True" Workbook="wb_Excel" ExistingWorkbook="">
+        <Loop Key="" IsCollapsed="false" ErrorPropertyName="">
+          <StartNodeID>grcojypd-yiro-uhbz-gvpx-tafkswvtzqnc</StartNodeID>
+          <Nodes>
+            <ActivateCell ID="grcojypd-yiro-uhbz-gvpx-tafkswvtzqnc" Index="2" X="360" Y="292" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="A1 셀 활성화" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" SheetName="&quot;리스트&quot;" Range="&quot;A1&quot;" />
+            <KeyInput ID="ajijqaob-xbwn-zthl-fxcu-yvlgmrvncwdi" Index="3" X="360" Y="396" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="열 자동 정렬 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[ctrl[a]][alt]&quot;H&quot;&quot;O&quot;&quot;I&quot;" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <KeyInput ID="vpnkzsig-gnzs-erlz-ojoc-osdfycxzfbzb" Index="4" X="360" Y="500" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="행 자동 정렬 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[alt]&quot;H&quot;&quot;O&quot;&quot;A&quot;" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <ActivateCell ID="xoskgwlm-pwnl-vtbu-gvys-hbtclhmxuiaf" Index="5" X="360" Y="604" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="A1 ~ H12 셀 활성화" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" SheetName="&quot;리스트&quot;" Range="&quot;A1:H1&quot;" />
+            <KeyInput ID="jgwwunho-hohw-lngs-tfac-qzqfgqsyqnbh" Index="6" X="360" Y="708" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="필터 적용 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[alt]&quot;H&quot;&quot;S&quot;&quot;F&quot;" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <KeyInput ID="mzxapymr-gqch-ppwb-vbfn-xemurorpmtpr" Index="7" X="360" Y="812" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="가운데정렬 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[alt]&quot;H&quot;&quot;A&quot;&quot;C&quot;" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <KeyInput ID="lqojhubu-qxre-bmtb-tnjs-dkwimcibhxfm" Index="8" X="360" Y="916" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="색 넣기 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[alt]&quot;H&quot;&quot;H&quot;[right][right][right][right][right][enter]" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <KeyInput ID="yeiidboz-pqec-ewox-ksui-svrkcbuwogpf" Index="9" X="360" Y="1020" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="500" AfterWaitTime="0" TitleName="글씨 굵기 커맨드 입력" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Input="[alt]&quot;H&quot;&quot;1&quot;" IsPassword="false" IsClickBeforeKeyInput="False" WaitForLoading="None" OriginSelector="" Selector="" SelectorVariable="" TypeOption="Software" Verify="False" EmptyField="False" TimeBetweenKeys="200" RetryTime="30000" FocusOn="False" OffsetX="0" OffsetY="0" Result="" />
+            <SaveWorkbook ID="zlxhfbyk-ajkb-ifvr-tcpx-uetjqqpeuixu" Index="10" X="360" Y="1124" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="" ScreenShot="" BeforeWaitTime="0" AfterWaitTime="0" TitleName="" Description="" IsContinueRun="false" IsDisable="false" Timeout="0" Workbook="wb_Excel" />
+          </Nodes>
+        </Loop>
+      </ExcelScope>
+    </Nodes>
+  </List>
+  <Links>
+    <Link Source="Start" Target="hmgkdasd-qnof-ynlg-xvaq-azblnasomeke" SourceConnectorPosition="Bottom" TargetConnectorPosition="Prev" />
+    <Link Source="GroupStart" Target="grcojypd-yiro-uhbz-gvpx-tafkswvtzqnc" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="grcojypd-yiro-uhbz-gvpx-tafkswvtzqnc" Target="ajijqaob-xbwn-zthl-fxcu-yvlgmrvncwdi" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="ajijqaob-xbwn-zthl-fxcu-yvlgmrvncwdi" Target="vpnkzsig-gnzs-erlz-ojoc-osdfycxzfbzb" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="vpnkzsig-gnzs-erlz-ojoc-osdfycxzfbzb" Target="xoskgwlm-pwnl-vtbu-gvys-hbtclhmxuiaf" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="xoskgwlm-pwnl-vtbu-gvys-hbtclhmxuiaf" Target="jgwwunho-hohw-lngs-tfac-qzqfgqsyqnbh" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="jgwwunho-hohw-lngs-tfac-qzqfgqsyqnbh" Target="mzxapymr-gqch-ppwb-vbfn-xemurorpmtpr" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="mzxapymr-gqch-ppwb-vbfn-xemurorpmtpr" Target="lqojhubu-qxre-bmtb-tnjs-dkwimcibhxfm" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="yeiidboz-pqec-ewox-ksui-svrkcbuwogpf" Target="zlxhfbyk-ajkb-ifvr-tcpx-uetjqqpeuixu" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+    <Link Source="lqojhubu-qxre-bmtb-tnjs-dkwimcibhxfm" Target="yeiidboz-pqec-ewox-ksui-svrkcbuwogpf" SourceConnectorPosition="Bottom" TargetConnectorPosition="Top" />
+  </Links>
+  <Comments />
+</Task>

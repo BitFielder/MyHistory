@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>☆프로그래머들을 위한 간편 툴 모음☆</title>
+	
+
+</head>
+
+<body>
+	
+	<h1>안녕하세요, 프로그래머들에게 유용한 간편 툴 모음 사이트입니다.</h1>
+	<h6 style="color:#aaaaaa;">홈페이지에 대한 문의는 ashe152@kbu.ac.kr으로 연락주세요!</h6>
+	<details>
+		<summary>자기 IP 주소 확인하기</summary>
+		<details>
+			<summary>IPv4, 기본적인 자기자신의 IP주소를 나타냅니다.</summary>
+			<h4>IPv4주소</h4>
+			<h5 id="ipv4">
+				<script src="https://code.jquery.com/jquery-latest.min.js"></script> 
+				<script type="application/javascript">
+					$(function() {
+					  $.getJSON("https://api.ip.pe.kr/json/",
+						function(json) {
+							console.log(json.ip);
+							const str=document.getElementById("ipv4");
+							str.innerHTML="현재 외부 IPv4주소는 "+json.ip+"입니다.";
+						}
+					  );
+					});
+				  </script>
+			 입니다.</h5>
+		</details>
+		<details>
+			<summary>IPv6, 자기자신의 IPv6주소를 나타냅니다.</summary>
+			<h4>IPv6주소</h4>
+			<h5 id="ipv6-address"></h5>
+			
+			<script>
+				var request = new XMLHttpRequest();
+				
+				request.open('GET', 'https://api6.ipify.org?format=json');
+				
+				request.onload = function() {
+					if (request.status === 200) {
+						var data = JSON.parse(request.responseText);
+						document.getElementById('ipv6-address').textContent = "현재 외부 IPv6주소는 "+data.ip+" 입니다.";
+					} else {
+						document.getElementById('ipv6-address').textContent = "IPv6 주소를 찾을 수 없습니다.";
+					}
+				}
+				
+				request.onerror = function() {
+					document.getElementById('ipv6-address').textContent = "IPv6 주소를 찾을 수 없습니다. API 서버에 문제가 있습니다.";
+				}
+				
+				request.send();
+			</script>
+		</details>
+	</details>
+	<hr />
+	<details>
+		<summary>색상값 찾아주는 툴</summary>
+		<link rel="stylesheet" type="text/css"href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+		<input id="color-picker" value='#000000' />
+		<script>
+			$('#color-picker').spectrum({
+			  type: "flat",
+			  preferredFormat: "hex",   //hex hex3 hsl rgb name
+			  togglePaletteOnly: false,   //줄이기버튼
+			  showInput: true,
+			  showInitial: true,
+			  showButtons: false
+			});
+	  
+			$("#color-picker").on('move.spectrum', function(e, tinycolor) {
+			  const hex = tinycolor.toHex();
+			  const rgba = tinycolor.toRgb();
+			  console.log(hex);
+			  console.log(rgba);
+			 });
+		  </script>
+		<h3>원하는 색상을 찾아드립니다.</h3>
+	</details>
+	<hr />
+	<details>
+		<summary>아스키 코드값 찾기</summary>
+		<label for="input">10진수, 아스키 코드값을 상호 변환해줍니다. </label>
+		<input type="text" id="input">
+		<button onclick="convert()">변환</button>
+		<p id="result"></p>
+	
+		<script>
+		  function convert() {
+			const input = document.getElementById('input').value;
+			let result = "";
+			
+			if (!isNaN(input)) {
+			  result = String.fromCharCode(input);
+			} else {
+			  result = input.charCodeAt(0);
+			}
+			document.getElementById('result').textContent =`입력한 "${input}"의 상호 변환값은 ${result}입니다.`;
+		  }
+		</script>
+		<details>
+			<summary>아스키코드표 펼치기</summary>
+			<table border="1" bgcolor="#8496ff">
+				<thead bgcolor="#caff98">
+				  <tr>
+					<th>10진수</th>
+					<th>16진수</th>
+					<th>문자</th>
+					<th bgcolor="#ffe5a0">10진수</th>
+					<th bgcolor="#ffe5a0">16진수</th>
+					<th bgcolor="#ffe5a0">문자</th>
+					<th>10진수</th>
+					<th>16진수</th>
+					<th>문자</th>
+					<th bgcolor="#ffe5a0">10진수</th>
+					<th bgcolor="#ffe5a0">16진수</th>
+					<th bgcolor="#ffe5a0">문자</th>
+				  </tr>
+				</thead>
+				<tbody bgcolor="#ffffff">
+				</tbody>
+			  </table>
+		  
+			  <script>
+				const tbody = document.querySelector('tbody');
+		  
+				for (let i = 0; i < 32; i++) {
+				  const tr = document.createElement('tr');
+				  for (let j = 0; j < 128; j+=32){
+					const decimal = document.createElement('td');
+					const hex = document.createElement('td');
+					const char = document.createElement('td');
+		  
+					decimal.textContent = (i+j);
+					hex.textContent = (i+j).toString(16).toUpperCase().padStart(2, '0');
+					char.textContent = String.fromCharCode((i+j));
+		  
+					tr.appendChild(decimal);
+					tr.appendChild(hex);
+					tr.appendChild(char);
+				  }
+				  tbody.appendChild(tr);
+				}
+			  </script>
+		</details>
+	</details>
+	<details>
+		<summary>유니코드값 찾기</summary>
+		<label for="input2">입력한 유니코드 값을 찾아줍니다. :</label>
+		<input type="text2" id="input2">
+		<button onclick="convert2()">변환</button>
+		<p id="result2"></p>
+	
+		<script>
+		  function convert2() {
+			const input = document.getElementById('input2').value;
+			const codePoint = input.codePointAt(0);
+			const result = document.getElementById('result2');
+			result.textContent = `입력한 "${input}"의 유니코드 값은 ${codePoint}입니다.`;
+		  }
+		</script>
+		<p>유니코드는 값이 너무 많아서 표를 보여드릴 수 없습니다.</p>
+		<p>유니코드 관련 사이트에 관해선 이쪽을 클릭하세요.</p>
+		<a href="https://symbl.cc/kr/">SYMBL</a><br />
+		<a href="http://titus.uni-frankfurt.de/unicode/unitestx.htm">TITUS</a>
+	</details>
+	<hr />
+	<details>
+		<summary>유용한 툴 모음</summary>
+		<h5>수없이 많은 다운로드 자료들</h5>
+		<h5>수없이 많은 다운로드 자료들</h5>
+		<h5>수없이 많은 다운로드 자료들</h5>
+		<h5>수없이 많은 다운로드 자료들</h5>
+	</details>
+</body>
+
+</html>

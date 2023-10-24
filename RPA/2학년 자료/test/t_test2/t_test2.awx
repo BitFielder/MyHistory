@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Task Index="0" X="0" Y="0" HasBreakPoint="false" FileName="t_test2.awx" RelativeFilePath="t_test2\t_test2.awx" IsShared="false">
+  <Version>3.0.0.0</Version>
+  <Description />
+  <Type>PROCESS</Type>
+  <Variables />
+  <List Key="" IsCollapsed="false">
+    <StartNodeID>Start</StartNodeID>
+    <Nodes>
+      <StartBlock ID="Start" Index="0" X="360" Y="100" HasBreakPoint="false" Compatibility="Normal" ErrorPropertyName="" ErrorPropertyContent="">
+        <ClassExpression IsError="false">
+          <ClassDefinitions />
+        </ClassExpression>
+        <ProcessOutput>
+          <OutputVariables />
+        </ProcessOutput>
+      </StartBlock>
+    </Nodes>
+  </List>
+  <Links />
+  <Comments />
+</Task>

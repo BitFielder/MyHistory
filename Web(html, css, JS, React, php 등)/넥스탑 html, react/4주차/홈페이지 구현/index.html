@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devie-width, initial-scale=1.0">
+    <title>홈페이지 구현</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>
+                <a href="#">logo</a>
+            </h1>
+            <ul id="gnb" class="">
+                <li>
+                    <a href="#">menu1</a>
+                    <div class="snb">
+                        <ul>
+                            <li>menu1-1</li>
+                            <li>menu1-2</li>
+                            <li>menu1-3</li>
+                            <li>menu1-4</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">menu2</a>
+                </li>
+                <li>
+                    <a href="#">menu3</a>
+                </li>
+                <li>
+                    <a href="#">menu4</a>
+                </li>
+            </ul>
+            <ul id="open">
+                <li><a href="#">login</a></li>
+                <li><a href="#">join</a></li>
+            </ul>
+
+            <div class="modal-wrapper" style="display: none;">
+                <div class="modal">
+                    <div class="modal-title">로그인</div>
+                    <p style="padding: 5px;">
+                        아이디 : <input type="text"><br>
+                        비밀번호 : <input type="text"><br>
+                    </p>
+                    <div class="close-wrapper">
+                        <button>회원가입</button>
+                        <button id="close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button type="button" class="prevBtn">prev</button>
+        <button type="button" class="nextBtn">next</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

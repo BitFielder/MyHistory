@@ -1,0 +1,20 @@
+﻿{
+  "isBackup": false,
+  "userId": "",
+  "organization": "",
+  "fileList": [
+    "one\\one.awx"
+  ],
+  "resource": {
+    "resourcePath": ".Resource",
+    "files": []
+  },
+  "libraryFileList": [],
+  "isUpload": false,
+  "type": "PROCESS",
+  "name": "YCYC",
+  "id": "icrkkdjy-urkt-rcic-dluc-xnqppbkjaswy",
+  "version": null,
+  "comment": "",
+  "description": ""
+}

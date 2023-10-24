@@ -1,0 +1,21 @@
+﻿{
+  "isBackup": false,
+  "userId": "",
+  "organization": "",
+  "fileList": [
+    "T_GB\\T_GB.awx",
+    "T_Excel\\T_Excel.awx"
+  ],
+  "resource": {
+    "resourcePath": ".Resource",
+    "files": []
+  },
+  "libraryFileList": [],
+  "isUpload": false,
+  "type": "PROCESS",
+  "name": "P_GB",
+  "id": "numajemv-fwjy-cbff-vhoe-invjavwhhcba",
+  "version": null,
+  "comment": "",
+  "description": ""
+}
